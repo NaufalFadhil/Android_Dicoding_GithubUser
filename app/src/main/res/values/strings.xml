@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Github User</string>
-    <string name="name_users">User Name</string>
+    <string name="name">Naufal Fadhil</string>
+    <string name="location">Bogor, Indonesia</string>
     <string name="lorem">lorem ipsum dolor sit amet</string>
     <!--  Other string resources -->
     <string-array name="username">
