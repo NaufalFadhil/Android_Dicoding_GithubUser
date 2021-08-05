@@ -1,11 +1,16 @@
 <resources>
     <string name="app_name">Github User</string>
     <string name="name">Naufal Fadhil</string>
+    <string name="username">naufalfadhil</string>
     <string name="location">Bogor, Indonesia</string>
     <string name="dummy_angka">99</string>
-    <string name="lorem">lorem ipsum dolor sit amet</string>
     <string name="stringFollowers">Followers:</string>
     <string name="stringFollowing">Following:</string>
+    <string name="followers">FOLLOWERS</string>
+    <string name="following">FOLLOWING</string>
+    <string name="repository">REPOSITORY</string>
+    <string name="logo_github">Logo Github</string>
+
     <!--  Other string resources -->
     <string-array name="username">
         <item>JakeWharton</item>
@@ -104,8 +109,4 @@
         <item>@drawable/user10</item>
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="followers">FOLLOWERS</string>
-    <string name="following">FOLLOWING</string>
-    <string name="repository">REPOSITORY</string>
 </resources>

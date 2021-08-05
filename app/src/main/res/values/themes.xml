@@ -14,5 +14,5 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="AppTheme.noActionBar" parent="Theme.AppCompat.NoActionBar"></style>
+    <style name="AppTheme.noActionBar" parent="Theme.AppCompat.NoActionBar" />
 </resources>

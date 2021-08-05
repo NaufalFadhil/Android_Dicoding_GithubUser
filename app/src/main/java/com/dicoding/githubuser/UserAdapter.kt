@@ -5,10 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.TextView
 import com.dicoding.githubuser.databinding.ItemUserBinding
-import de.hdodenhof.circleimageview.CircleImageView
 
 class UserAdapter internal constructor(private val context: Context) : BaseAdapter() {
     internal var users = arrayListOf<User>()
@@ -31,12 +28,12 @@ class UserAdapter internal constructor(private val context: Context) : BaseAdapt
         return itemView
     }
 
-    private inner class ViewHolder internal constructor(view: View) {
+    private inner class ViewHolder(view: View) {
         private val binding = ItemUserBinding.bind(view)
 
-        internal fun bind(user: User) {
+        fun bind(user: User) {
             binding.txtName.text = user.name
-            binding.txtFollower.text = user.followers.toString()
+            binding.txtFollowers.text = user.followers.toString()
             binding.txtFollowing.text = user.following.toString()
             binding.imgAvatar.setImageResource(user.avatar)
         }

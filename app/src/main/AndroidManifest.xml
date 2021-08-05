@@ -8,8 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GithubUser">
-        <activity android:name=".DetailActivity"></activity>
+        android:theme="@style/Theme.GithubUser"
+        android:fullBackupContent="@xml/backup_descriptor">
+        <activity android:name=".DetailActivity" />
         <activity android:name=".UserListActivity" />
         <activity
             android:name=".SplashScreenActivity"

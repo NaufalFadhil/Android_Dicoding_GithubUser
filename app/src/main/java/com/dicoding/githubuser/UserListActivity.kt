@@ -36,7 +36,6 @@ class UserListActivity : AppCompatActivity() {
         prepare()
         addItem()
 
-
         listView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
             Toast.makeText(this@UserListActivity, users[position].name, Toast.LENGTH_SHORT).show()
             val moveDetailIntent= Intent(this@UserListActivity, DetailActivity::class.java)

@@ -10,7 +10,7 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        var handler = Handler()
+        var handler = Handler(mainLooper)
         handler.postDelayed({
             var splash = Intent(this@SplashScreenActivity, UserListActivity::class.java)
             startActivity(splash)

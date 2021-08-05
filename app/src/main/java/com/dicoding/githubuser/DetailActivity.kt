@@ -1,9 +1,7 @@
 package com.dicoding.githubuser
 
-import android.content.res.TypedArray
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 import android.widget.TextView
 import com.dicoding.githubuser.databinding.ActivityDetailBinding
 import de.hdodenhof.circleimageview.CircleImageView
@@ -31,12 +29,12 @@ class DetailActivity : AppCompatActivity() {
         val tvRepository: TextView = binding.tvRepository
 
         cimAvatar.setImageResource(user.avatar)
-        tvName.setText(user.name)
-        tvUsername.setText(user.username)
-        tvLocation.setText(user.location)
-        tvFollowers.setText(user.followers.toString())
-        tvFollowing.setText(user.following.toString())
-        tvRepository.setText(user.repository.toString())
+        tvName.text = user.name
+        tvUsername.text = user.username
+        tvLocation.text = user.location
+        tvFollowers.text = user.followers.toString()
+        tvFollowing.text = user.following.toString()
+        tvRepository.text = user.repository.toString()
 
     }
 }
