@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:id="@+id/frame_container">
 
     <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -21,7 +22,7 @@
         android:textSize="18sp"
         android:textStyle="bold" />
     <TextView
-        android:id="@+id/txt_location"
+        android:id="@+id/stringFollowers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/txt_name"
@@ -30,6 +31,44 @@
         android:layout_toRightOf="@id/img_avatar"
         android:ellipsize="end"
         android:maxLines="3"
-        android:text="@string/location" />
+        android:text="@string/stringFollowers" />
+
+    <TextView
+        android:id="@+id/txt_follower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_name"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/stringFollowers"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="@string/dummy_angka" />
+
+    <TextView
+        android:id="@+id/stringFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stringFollowers"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/img_avatar"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="@string/stringFollowing" />
+
+    <TextView
+        android:id="@+id/txt_following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stringFollowers"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/stringFollowers"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="@string/dummy_angka" />
 
 </RelativeLayout>
