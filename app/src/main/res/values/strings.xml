@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Github User</string>
-    <string name="name">Naufal Fadhil</string>
+    <string name="dummy_name">Naufal Fadhil Athallah</string>
     <string name="username">naufalfadhil</string>
     <string name="location">Bogor, Indonesia</string>
-    <string name="dummy_angka">99</string>
+    <string name="dummy_number">99</string>
     <string name="stringFollowers">Followers:</string>
     <string name="stringFollowing">Following:</string>
     <string name="followers">FOLLOWERS</string>
