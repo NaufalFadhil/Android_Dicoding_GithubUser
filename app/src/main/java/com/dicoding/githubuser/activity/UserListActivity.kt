@@ -17,6 +17,9 @@ class UserListActivity : AppCompatActivity() {
 
     private fun showSelectedUser(user: User) {
         Toast.makeText(this, "You are choose ${user.name}", Toast.LENGTH_SHORT).show()
+        val moveDetailIntent= Intent(this@UserListActivity, DetailActivity::class.java)
+        moveDetailIntent.putExtra(DetailActivity.EXTRA_USER, user)
+        startActivity(moveDetailIntent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,18 +38,22 @@ class UserListActivity : AppCompatActivity() {
         val dataName = resources.getStringArray(R.array.name)
         val dataFollowers = resources.getStringArray(R.array.followers)
         val dataFollowing = resources.getStringArray(R.array.following)
+        val dataUsername = resources.getStringArray(R.array.username)
+        val dataRepository = resources.getStringArray(R.array.repository)
+        val dataCompany = resources.getStringArray(R.array.company)
+        val dataLocation = resources.getStringArray(R.array.location)
 
         val listUser = ArrayList<User>()
         for (position in dataName.indices) {
             val user = User (
                 dataAvatar.getResourceId(position, -1),
                 dataName[position],
+                dataUsername[position],
+                dataCompany[position],
+                dataLocation[position],
                 dataFollowers[position],
                 dataFollowing[position],
-//                dataUsername[position],
-//                dataLocation[position],
-//                dataRepo.getInt(position, -1),
-//                dataCompany[position]
+                dataRepository[position],
             )
             listUser.add(user)
         }

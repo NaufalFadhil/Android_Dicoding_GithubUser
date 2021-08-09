@@ -29,13 +29,13 @@ class DetailActivity : AppCompatActivity() {
         val tvLocation: TextView = binding.tvLocation
         val tvRepository: TextView = binding.tvRepository
 
-//        cimAvatar.setImageResource(user.avatar)
+        cimAvatar.setImageResource(user.avatar)
         tvName.text = user.name
-//        tvUsername.text = user.username
-//        tvLocation.text = user.location
+        tvUsername.text = user.username
+        tvLocation.text = user.location
         tvFollowers.text = user.followers.toString()
         tvFollowing.text = user.following.toString()
-//        tvRepository.text = user.repository.toString()
+        tvRepository.text = user.repository.toString()
 
     }
 }
