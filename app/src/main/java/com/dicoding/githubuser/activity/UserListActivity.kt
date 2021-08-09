@@ -1,7 +1,9 @@
 package com.dicoding.githubuser.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.githubuser.R
 import com.dicoding.githubuser.User
@@ -13,6 +15,10 @@ class UserListActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUserListBinding
     private val list = ArrayList<User>()
 
+    private fun showSelectedUser(user: User) {
+        Toast.makeText(this, "You are choose ${user.name}", Toast.LENGTH_SHORT).show()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUserListBinding.inflate(layoutInflater)
@@ -22,20 +28,6 @@ class UserListActivity : AppCompatActivity() {
 
         list.addAll(getListUsers())
         showRecyclerList()
-
-//        val listView:ListView = binding.lvList
-//        adapter = UserAdapter(this)
-//        listView.adapter = adapter
-//
-//        prepare()
-//        addItem()
-//
-//        listView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
-//            Toast.makeText(this@UserListActivity, users[position].name, Toast.LENGTH_SHORT).show()
-//            val moveDetailIntent= Intent(this@UserListActivity, DetailActivity::class.java)
-//            moveDetailIntent.putExtra(DetailActivity.EXTRA_USER, users[position])
-//            startActivity(moveDetailIntent)
-//        }
     }
 
     fun getListUsers(): ArrayList<User> {
@@ -65,5 +57,11 @@ class UserListActivity : AppCompatActivity() {
         binding.rvUsers.layoutManager = LinearLayoutManager(this)
         val listUserAdapter = ListUserAdapter(list)
         binding.rvUsers.adapter = listUserAdapter
+
+        listUserAdapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback{
+            override fun onItemClicked(data: User) {
+                showSelectedUser(data)
+            }
+        })
     }
 }

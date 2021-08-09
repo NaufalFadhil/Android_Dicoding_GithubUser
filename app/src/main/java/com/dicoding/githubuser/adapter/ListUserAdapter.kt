@@ -9,6 +9,13 @@ import com.dicoding.githubuser.User
 import com.dicoding.githubuser.databinding.ItemRowUserBinding
 
 class ListUserAdapter( private val listUser: ArrayList<User>) : RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
+
+    private var onItemClickCallback: OnItemClickCallback? = null
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -34,7 +41,13 @@ class ListUserAdapter( private val listUser: ArrayList<User>) : RecyclerView.Ada
                 binding.tvItemName.text = user.name
                 binding.tvItemFollowers.text = user.followers
                 binding.tvItemFollowing.text = user.following
+
+                itemView.setOnClickListener{onItemClickCallback?.onItemClicked(user) }
             }
         }
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: User)
     }
 }
