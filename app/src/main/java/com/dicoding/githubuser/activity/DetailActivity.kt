@@ -3,6 +3,8 @@ package com.dicoding.githubuser.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.dicoding.githubuser.User
 import com.dicoding.githubuser.databinding.ActivityDetailBinding
 import de.hdodenhof.circleimageview.CircleImageView
@@ -21,14 +23,20 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val user = intent.getParcelableExtra<User>(EXTRA_USER) as User
-//        val cimAvatar: CircleImageView = binding.imgAvatar
+
+
+
+        val imgAvatar: CircleImageView = binding.imgAvatar
         val tvUsername: TextView = binding.tvUsername
 //        val tvFollowers: TextView = binding.tvFollowers
 //        val tvFollowing: TextView = binding.tvFollowing
 //        val tvLocation: TextView = binding.tvLocation
 //        val tvRepository: TextView = binding.tvRepository
 
-//        cimAvatar.setImageResource(user.avatar)
+        Glide.with(this@DetailActivity)
+            .load(user.avatar)
+            .apply(RequestOptions().override(90,90))
+            .into(imgAvatar)
 //        tvName.text = user.name
         tvUsername.text = user.username
 //        tvLocation.text = user.location

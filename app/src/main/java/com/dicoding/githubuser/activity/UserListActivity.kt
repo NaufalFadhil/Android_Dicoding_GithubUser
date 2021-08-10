@@ -36,7 +36,6 @@ class UserListActivity : AppCompatActivity() {
     }
 
     private fun showSelectedUser(user: User) {
-//        Toast.makeText(this, "You are choose ${user.username}", Toast.LENGTH_SHORT).show()
         val moveDetailIntent= Intent(this@UserListActivity, DetailActivity::class.java)
         moveDetailIntent.putExtra(DetailActivity.EXTRA_USER, user)
         startActivity(moveDetailIntent)
@@ -88,12 +87,12 @@ class UserListActivity : AppCompatActivity() {
 
                     for (i in 0 until items.length()) {
                         val item = items.getJSONObject(i)
-                        val id = item.getInt("id")
+                        val url = item.getString("url")
                         val username = item.getString("login")
                         val avatar = item.getString("avatar_url")
 
                         val user = User()
-                        user.id = id
+                        user.url = url
                         user.avatar = avatar
                         user.username = username
                         listItems.add(user)
