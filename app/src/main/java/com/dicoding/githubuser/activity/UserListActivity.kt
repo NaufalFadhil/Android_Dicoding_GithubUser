@@ -13,9 +13,11 @@ import com.dicoding.githubuser.User
 import com.dicoding.githubuser.adapter.ListUserAdapter
 import com.dicoding.githubuser.databinding.ActivityUserListBinding
 import com.loopj.android.http.AsyncHttpClient
+import com.loopj.android.http.AsyncHttpClient.log
 import com.loopj.android.http.AsyncHttpResponseHandler
 import cz.msebera.android.httpclient.Header
 import org.json.JSONArray
+import org.json.JSONObject
 import java.lang.Exception
 
 class UserListActivity : AppCompatActivity() {
@@ -28,7 +30,7 @@ class UserListActivity : AppCompatActivity() {
     }
 
     private fun showSelectedUser(user: User) {
-        Toast.makeText(this, "You are choose ${user.name}", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "You are choose ${user.username}", Toast.LENGTH_SHORT).show()
         val moveDetailIntent= Intent(this@UserListActivity, DetailActivity::class.java)
         moveDetailIntent.putExtra(DetailActivity.EXTRA_USER, user)
         startActivity(moveDetailIntent)
@@ -43,7 +45,8 @@ class UserListActivity : AppCompatActivity() {
 
 //        list.addAll(getListUsers())
         getListUsers()
-        showRecyclerList()
+
+        Log.d("on create", list.toString())
     }
 
 //    fun getListUsers(): ArrayList<User> {
@@ -78,6 +81,10 @@ class UserListActivity : AppCompatActivity() {
         val listUserAdapter = ListUserAdapter(list)
         binding.rvUsers.adapter = listUserAdapter
 
+        Log.d("showing", list.toString())
+
+
+
         listUserAdapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback{
             override fun onItemClicked(data: User) {
                 showSelectedUser(data)
@@ -99,21 +106,33 @@ class UserListActivity : AppCompatActivity() {
             ) {
                 binding.progressBar.visibility = View.INVISIBLE
 
-                val listUser = ArrayList<String>()
+                val listItems = ArrayList<User>()
                 val result = String(responseBody)
                 Log.d(TAG, result)
                 try {
-                    val jsonArray = JSONArray(result)
+                    val responseObject = JSONObject(result)
+                    val items = responseObject.getJSONArray("items")
 
-                    for (i in 0 until jsonArray.length()) {
-                        val jsonObject = jsonArray.getJSONObject(i)
-                        val username = jsonObject.getString("login")
-                        val id = jsonObject.getString("id")
-                        listUser.add("\n$username\n - $id\n")
+                    for (i in 0 until items.length()) {
+                        val item = items.getJSONObject(i)
+                        val id = item.getInt("id")
+                        val username = item.getString("login")
+                        val avatar = item.getString("avatar_url")
+
+                        val user = User()
+                        user.id = id
+                        user.avatar = avatar
+                        user.username = username
+                        listItems.add(user)
+
+                        Log.d("List nih", listItems.toString())
                     }
 
-//                    val adapter = ArrayAdapter(this@UserListActivity, android.R.layout.simple_list_item_2, listUser)
-//                    binding.rvUsers.adapter = adapter
+                    list.addAll(listItems)
+                    Log.d("List semua", list.toString())
+                    Log.d("get User", list.toString())
+                    
+                    showRecyclerList()
                 } catch (e: Exception) {
                     Toast.makeText(this@UserListActivity, e.message, Toast.LENGTH_SHORT).show()
                     e.printStackTrace()

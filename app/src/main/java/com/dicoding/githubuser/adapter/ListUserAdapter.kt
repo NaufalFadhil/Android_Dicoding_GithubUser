@@ -36,11 +36,11 @@ class ListUserAdapter( private val listUser: ArrayList<User>) : RecyclerView.Ada
                 Glide.with(itemView.context)
                     .load(user.avatar)
                     .apply(RequestOptions().override(90,90))
-                    .into(imgItemAvatar)
+                    .into(imgAvatar)
 
-                binding.tvItemName.text = user.name
-                binding.tvItemFollowers.text = user.followers
-                binding.tvItemFollowing.text = user.following
+                binding.tvUsername.text = user.username
+//                binding.tvItemFollowers.text = user.followers
+//                binding.tvItemFollowing.text = user.following
 
                 itemView.setOnClickListener{onItemClickCallback?.onItemClicked(user) }
             }

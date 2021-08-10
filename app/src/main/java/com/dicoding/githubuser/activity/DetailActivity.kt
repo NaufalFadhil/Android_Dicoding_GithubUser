@@ -21,21 +21,20 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val user = intent.getParcelableExtra<User>(EXTRA_USER) as User
-        val cimAvatar: CircleImageView = binding.imgAvatar
-        val tvName: TextView = binding.tvName
+//        val cimAvatar: CircleImageView = binding.imgAvatar
         val tvUsername: TextView = binding.tvUsername
-        val tvFollowers: TextView = binding.tvFollowers
-        val tvFollowing: TextView = binding.tvFollowing
-        val tvLocation: TextView = binding.tvLocation
-        val tvRepository: TextView = binding.tvRepository
+//        val tvFollowers: TextView = binding.tvFollowers
+//        val tvFollowing: TextView = binding.tvFollowing
+//        val tvLocation: TextView = binding.tvLocation
+//        val tvRepository: TextView = binding.tvRepository
 
-        cimAvatar.setImageResource(user.avatar)
-        tvName.text = user.name
+//        cimAvatar.setImageResource(user.avatar)
+//        tvName.text = user.name
         tvUsername.text = user.username
-        tvLocation.text = user.location
-        tvFollowers.text = user.followers.toString()
-        tvFollowing.text = user.following.toString()
-        tvRepository.text = user.repository.toString()
+//        tvLocation.text = user.location
+//        tvFollowers.text = user.followers.toString()
+//        tvFollowing.text = user.following.toString()
+//        tvRepository.text = user.repository.toString()
 
     }
 }
