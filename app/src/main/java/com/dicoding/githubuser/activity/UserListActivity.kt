@@ -30,7 +30,7 @@ class UserListActivity : AppCompatActivity() {
     }
 
     private fun showSelectedUser(user: User) {
-        Toast.makeText(this, "You are choose ${user.username}", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, "You are choose ${user.username}", Toast.LENGTH_SHORT).show()
         val moveDetailIntent= Intent(this@UserListActivity, DetailActivity::class.java)
         moveDetailIntent.putExtra(DetailActivity.EXTRA_USER, user)
         startActivity(moveDetailIntent)
@@ -43,47 +43,13 @@ class UserListActivity : AppCompatActivity() {
 
         binding.rvUsers.setHasFixedSize(true)
 
-//        list.addAll(getListUsers())
         getListUsers()
-
-        Log.d("on create", list.toString())
     }
-
-//    fun getListUsers(): ArrayList<User> {
-//        val dataAvatar = resources.obtainTypedArray(R.array.avatar)
-//        val dataName = resources.getStringArray(R.array.name)
-//        val dataFollowers = resources.getStringArray(R.array.followers)
-//        val dataFollowing = resources.getStringArray(R.array.following)
-//        val dataUsername = resources.getStringArray(R.array.username)
-//        val dataRepository = resources.getStringArray(R.array.repository)
-//        val dataCompany = resources.getStringArray(R.array.company)
-//        val dataLocation = resources.getStringArray(R.array.location)
-//
-//        val listUser = ArrayList<User>()
-//        for (position in dataName.indices) {
-//            val user = User (
-//                dataAvatar.getResourceId(position, -1),
-//                dataName[position],
-//                dataUsername[position],
-//                dataCompany[position],
-//                dataLocation[position],
-//                dataFollowers[position],
-//                dataFollowing[position],
-//                dataRepository[position],
-//            )
-//            listUser.add(user)
-//        }
-//        return listUser
-//    }
 
     private fun showRecyclerList() {
         binding.rvUsers.layoutManager = LinearLayoutManager(this)
         val listUserAdapter = ListUserAdapter(list)
         binding.rvUsers.adapter = listUserAdapter
-
-        Log.d("showing", list.toString())
-
-
 
         listUserAdapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback{
             override fun onItemClicked(data: User) {
@@ -97,7 +63,7 @@ class UserListActivity : AppCompatActivity() {
         val client = AsyncHttpClient()
 //        client.addHeader("Authorization", "token <TokenGithub>")
         client.addHeader("User-Agent", "request")
-        val url = "https://api.github.com/search/users?q=naufalfad"
+        val url = "https://api.github.com/search/users?q=naufalfadhil"
         client.get(url, object : AsyncHttpResponseHandler() {
             override fun onSuccess(
                 statusCode: Int,
@@ -124,14 +90,9 @@ class UserListActivity : AppCompatActivity() {
                         user.avatar = avatar
                         user.username = username
                         listItems.add(user)
-
-                        Log.d("List nih", listItems.toString())
                     }
-
                     list.addAll(listItems)
-                    Log.d("List semua", list.toString())
-                    Log.d("get User", list.toString())
-                    
+
                     showRecyclerList()
                 } catch (e: Exception) {
                     Toast.makeText(this@UserListActivity, e.message, Toast.LENGTH_SHORT).show()
