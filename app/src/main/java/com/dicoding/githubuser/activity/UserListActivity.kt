@@ -1,11 +1,16 @@
 package com.dicoding.githubuser.activity
 
+import android.app.SearchManager
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
+//import android.widget.SearchView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.githubuser.R
@@ -19,6 +24,7 @@ import cz.msebera.android.httpclient.Header
 import org.json.JSONArray
 import org.json.JSONObject
 import java.lang.Exception
+import androidx.appcompat.widget.SearchView
 
 class UserListActivity : AppCompatActivity() {
 
@@ -58,12 +64,12 @@ class UserListActivity : AppCompatActivity() {
         })
     }
 
-    private fun getListUsers() {
+    private fun getListUsers(query : String? = "naufalfadhil") {
         binding.progressBar.visibility = View.VISIBLE
         val client = AsyncHttpClient()
-//        client.addHeader("Authorization", "token <TokenGithub>")
+//        client.addHeader("Authorization", "token <ReviewerTokenPlease>")
         client.addHeader("User-Agent", "request")
-        val url = "https://api.github.com/search/users?q=naufalfadhil"
+        val url = "https://api.github.com/search/users?q=${query}"
         client.get(url, object : AsyncHttpResponseHandler() {
             override fun onSuccess(
                 statusCode: Int,
@@ -73,6 +79,7 @@ class UserListActivity : AppCompatActivity() {
                 binding.progressBar.visibility = View.INVISIBLE
 
                 val listItems = ArrayList<User>()
+                list.clear()
                 val result = String(responseBody)
                 Log.d(TAG, result)
                 try {
@@ -95,7 +102,6 @@ class UserListActivity : AppCompatActivity() {
 
                     showRecyclerList()
                 } catch (e: Exception) {
-                    Toast.makeText(this@UserListActivity, e.message, Toast.LENGTH_SHORT).show()
                     e.printStackTrace()
                 }
 
@@ -118,4 +124,30 @@ class UserListActivity : AppCompatActivity() {
             }
         })
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.option_menu, menu)
+
+        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        val searchView = menu?.findItem(R.id.search)?.actionView as SearchView
+
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
+        searchView.queryHint = resources.getString((R.string.search_hint))
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                getListUsers(newText)
+                return true
+            }
+        })
+        return true
+    }
+
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        when
+//    }
 }
