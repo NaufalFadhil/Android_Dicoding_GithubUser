@@ -5,12 +5,24 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.dicoding.githubuser.User
+import com.dicoding.githubuser.model.User
 import com.dicoding.githubuser.databinding.ItemRowUserBinding
 
-class ListUserAdapter( private val listUser: ArrayList<User>) : RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
+class ListUserAdapter : RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
 
     private var onItemClickCallback: OnItemClickCallback? = null
+    private val userData = ArrayList<User>()
+
+    fun setData(items: ArrayList<User>) {
+        userData.clear()
+        userData.addAll(items)
+        notifyDataSetChanged()
+    }
+
+    fun clearData() {
+        userData.drop(userData.size)
+        notifyDataSetChanged()
+    }
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
@@ -25,10 +37,10 @@ class ListUserAdapter( private val listUser: ArrayList<User>) : RecyclerView.Ada
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        holder.bind(listUser[position])
+        holder.bind(userData[position])
     }
 
-    override fun getItemCount(): Int = listUser.size
+    override fun getItemCount(): Int = userData.size
 
     inner class ListViewHolder(private val binding: ItemRowUserBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(user: User) {

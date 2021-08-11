@@ -1,4 +1,4 @@
-package com.dicoding.githubuser
+package com.dicoding.githubuser.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

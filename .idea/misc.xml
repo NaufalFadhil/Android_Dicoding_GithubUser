@@ -5,7 +5,11 @@
       <map>
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/activity_detail.xml" value="0.264" />
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/activity_splash_screen.xml" value="0.22644927536231885" />
-        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/activity_user_list.xml" value="0.3935708079930495" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/activity_user_list.xml" value="0.176" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/fragment_follow.xml" value="0.1802536231884058" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/fragment_followers.xml" value="0.1802536231884058" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/fragment_following.xml" value="0.1802536231884058" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/fragment_no_search.xml" value="0.17889492753623187" />
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/item_row_user.xml" value="0.4" />
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/item_user.xml" value="0.536" />
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/menu/option_menu.xml" value="0.4" />

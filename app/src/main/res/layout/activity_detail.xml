@@ -10,7 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="?attr/colorPrimary">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_avatar"
@@ -32,6 +33,7 @@
             android:text="@string/dummy_username"
             android:textAlignment="center"
             android:textSize="20sp"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/img_avatar"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,6 +45,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/location"
+
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_avatar" />
 
@@ -54,6 +58,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/followers"
             android:textAlignment="center"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/img_avatar"
             app:layout_constraintTop_toBottomOf="@+id/tv_username" />
 
@@ -65,6 +70,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/following"
             android:textAlignment="center"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/tv_username" />
 
@@ -76,9 +82,9 @@
             android:text="@string/dummy_number"
             android:textAlignment="center"
             android:textSize="16sp"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/img_avatar"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
-
 
         <TextView
             android:id="@+id/tv_following"
@@ -88,8 +94,27 @@
             android:text="@string/dummy_number"
             android:textAlignment="center"
             android:textSize="16sp"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/tv_followers"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/tv_location"
+            app:tabTextColor="@android:color/white"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="200dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/tabs" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

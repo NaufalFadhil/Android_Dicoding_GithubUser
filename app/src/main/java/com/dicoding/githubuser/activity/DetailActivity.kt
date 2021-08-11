@@ -3,10 +3,16 @@ package com.dicoding.githubuser.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.annotation.StringRes
+import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.dicoding.githubuser.User
+import com.dicoding.githubuser.R
+import com.dicoding.githubuser.model.User
+import com.dicoding.githubuser.adapter.SectionsPagerAdapter
 import com.dicoding.githubuser.databinding.ActivityDetailBinding
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import de.hdodenhof.circleimageview.CircleImageView
 
 class DetailActivity : AppCompatActivity() {
@@ -15,6 +21,12 @@ class DetailActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_USER = "extra_user"
+
+        @StringRes
+        private val TAB_TITLES = intArrayOf(
+            R.string.followers,
+            R.string.following
+        )
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,8 +35,6 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val user = intent.getParcelableExtra<User>(EXTRA_USER) as User
-
-
 
         val imgAvatar: CircleImageView = binding.imgAvatar
         val tvUsername: TextView = binding.tvUsername
@@ -44,5 +54,14 @@ class DetailActivity : AppCompatActivity() {
 //        tvFollowing.text = user.following.toString()
 //        tvRepository.text = user.repository.toString()
 
+        val sectionsPagerAdapter = SectionsPagerAdapter(this)
+        val viewPager: ViewPager2 = findViewById(R.id.view_pager)
+        viewPager.adapter = sectionsPagerAdapter
+        val tabs: TabLayout = findViewById(R.id.tabs)
+        TabLayoutMediator(tabs, viewPager) {
+            tab, position -> tab.text = resources.getString(TAB_TITLES[position])
+        }.attach()
+
+        supportActionBar?.elevation = 0f
     }
 }

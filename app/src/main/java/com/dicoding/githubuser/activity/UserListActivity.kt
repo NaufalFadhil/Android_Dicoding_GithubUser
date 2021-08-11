@@ -5,31 +5,23 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
-import android.view.MenuItem
 import android.view.View
-import android.widget.ArrayAdapter
 //import android.widget.SearchView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.githubuser.R
-import com.dicoding.githubuser.User
+import com.dicoding.githubuser.model.User
 import com.dicoding.githubuser.adapter.ListUserAdapter
 import com.dicoding.githubuser.databinding.ActivityUserListBinding
-import com.loopj.android.http.AsyncHttpClient
-import com.loopj.android.http.AsyncHttpClient.log
-import com.loopj.android.http.AsyncHttpResponseHandler
-import cz.msebera.android.httpclient.Header
-import org.json.JSONArray
-import org.json.JSONObject
-import java.lang.Exception
 import androidx.appcompat.widget.SearchView
+import androidx.lifecycle.ViewModelProvider
+import com.dicoding.githubuser.viewmodel.MainViewModel
 
 class UserListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUserListBinding
-    private val list = ArrayList<User>()
+    private lateinit var adapter: ListUserAdapter
+    private lateinit var mainViewModel: MainViewModel
 
     companion object {
         private val TAG = UserListActivity::class.java.simpleName
@@ -46,83 +38,57 @@ class UserListActivity : AppCompatActivity() {
         binding = ActivityUserListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.rvUsers.setHasFixedSize(true)
+        adapter = ListUserAdapter()
+        adapter.notifyDataSetChanged()
 
-        getListUsers()
+        showLoading(false)
+        showRecyclerList()
+
+        mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
+            MainViewModel::class.java)
+        mainViewModel.getUsers().observe(this, {
+            User -> if (User != null) {
+                    adapter.setData(User)
+                    showLoading(false)
+                }
+        })
     }
 
     private fun showRecyclerList() {
         binding.rvUsers.layoutManager = LinearLayoutManager(this)
-        val listUserAdapter = ListUserAdapter(list)
-        binding.rvUsers.adapter = listUserAdapter
+        binding.rvUsers.adapter = adapter
 
-        listUserAdapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback{
+        adapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback{
             override fun onItemClicked(data: User) {
                 showSelectedUser(data)
             }
         })
     }
 
-    private fun getListUsers(query : String? = "naufalfadhil") {
-        binding.progressBar.visibility = View.VISIBLE
-        val client = AsyncHttpClient()
-//        client.addHeader("Authorization", "token <ReviewerTokenPlease>")
-        client.addHeader("User-Agent", "request")
-        val url = "https://api.github.com/search/users?q=${query}"
-        client.get(url, object : AsyncHttpResponseHandler() {
-            override fun onSuccess(
-                statusCode: Int,
-                headers: Array<out Header>?,
-                responseBody: ByteArray
-            ) {
-                binding.progressBar.visibility = View.INVISIBLE
-
-                val listItems = ArrayList<User>()
-                list.clear()
-                val result = String(responseBody)
-                Log.d(TAG, result)
-                try {
-                    val responseObject = JSONObject(result)
-                    val items = responseObject.getJSONArray("items")
-
-                    for (i in 0 until items.length()) {
-                        val item = items.getJSONObject(i)
-                        val url = item.getString("url")
-                        val username = item.getString("login")
-                        val avatar = item.getString("avatar_url")
-
-                        val user = User()
-                        user.url = url
-                        user.avatar = avatar
-                        user.username = username
-                        listItems.add(user)
-                    }
-                    list.addAll(listItems)
-
-                    showRecyclerList()
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-
-            }
-
-            override fun onFailure(
-                statusCode: Int,
-                headers: Array<out Header>?,
-                responseBody: ByteArray?,
-                error: Throwable?
-            ) {
-                binding.progressBar.visibility = View.INVISIBLE
-                val errorMessage = when (statusCode) {
-                    401 -> "$statusCode : Bad Request"
-                    403 -> "$statusCode : Forbidden"
-                    404 -> "$statusCode : Not Found"
-                    else -> "$statusCode : ${error?.message}"
-                }
-                Toast.makeText(this@UserListActivity, errorMessage, Toast.LENGTH_SHORT).show()
-            }
-        })
+    private fun showLoading(state: Boolean) {
+        if (state) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
+        }
     }
+
+    private fun showSearchNotFound(state: Boolean) {
+        if (state) {
+            binding.imgSearch.visibility = View.VISIBLE
+        } else {
+            binding.imgSearch.visibility = View.GONE
+        }
+    }
+
+    private fun showRecyclerView(state: Boolean) {
+        if (state) {
+            binding.rvUsers.visibility = View.VISIBLE
+        } else {
+            binding.rvUsers.visibility = View.INVISIBLE
+        }
+    }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
@@ -138,9 +104,18 @@ class UserListActivity : AppCompatActivity() {
                 return false
             }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                getListUsers(newText)
-                return true
+            override fun onQueryTextChange(newText: String): Boolean {
+                if (newText.isEmpty()) {
+                    showLoading(false)
+                    showSearchNotFound(true)
+                    showRecyclerView(false)
+                    return true
+                } else {
+                    showRecyclerView(true)
+                    showSearchNotFound(false)
+                    mainViewModel.setUser(newText)
+                    return true
+                }
             }
         })
         return true
