@@ -47,8 +47,9 @@ class UserListActivity : AppCompatActivity() {
             MainViewModel::class.java)
         mainViewModel.getUsers().observe(this, {
             User -> if (User.isEmpty()) {
-                        showSearchNotFound(true)
+                        showLoading(false)
                         showRecyclerView(false)
+                        showSearchNotFound(true)
                     } else if (User != null) {
                         showLoading(false)
                         adapter.setData(User)
@@ -113,6 +114,7 @@ class UserListActivity : AppCompatActivity() {
                     showRecyclerView(false)
                     true
                 } else {
+                    showLoading(true)
                     showSearchNotFound(false)
                     showRecyclerView(true)
                     mainViewModel.setUser(newText)
