@@ -44,7 +44,6 @@ class MainViewModel : ViewModel() {
                         val avatar = item.getString("avatar_url")
 
                         val user = User()
-                        user.url = url
                         user.avatar = avatar
                         user.username = username
                         listItems.add(user)
@@ -99,7 +98,7 @@ class MainViewModel : ViewModel() {
                         val followers = responseObject.getInt("followers")
                         val following = responseObject.getInt("following")
                         val repository = responseObject.getInt("public_repos")
-                        val bio = responseObject.getString("bio")
+                        val company = responseObject.getString("company")
                         val location = responseObject.getString("location")
                         val blog = responseObject.getString("blog")
 
@@ -110,6 +109,9 @@ class MainViewModel : ViewModel() {
                         detailUserItem.followers = followers
                         detailUserItem.following = following
                         detailUserItem.repository = repository
+                        detailUserItem.location = location
+                        detailUserItem.company = company
+                        detailUserItem.blog = blog
                         log.d("output nihh", detailUserItem.toString())
 
                         detailUser.postValue(detailUserItem)
@@ -165,7 +167,6 @@ class MainViewModel : ViewModel() {
                         val avatar = responObjects.getString("avatar_url")
 
                         val follower = User()
-                        follower.url = url.toString()
                         follower.avatar = avatar
                         follower.username = username
                         listItems.add(follower)
@@ -224,7 +225,6 @@ class MainViewModel : ViewModel() {
                         val avatar = responObjects.getString("avatar_url")
 
                         val following = User()
-                        following.url = url.toString()
                         following.avatar = avatar
                         following.username = username
                         listItems.add(following)

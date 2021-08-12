@@ -65,11 +65,10 @@ class DetailActivity : AppCompatActivity() {
                         tvLocation.text = detailUserItem.location
                         tvFollowers.text = detailUserItem.followers.toString()
                         tvFollowing.text = detailUserItem.following.toString()
-//                        tvRepository.text = user.repository.toString()
+                        tvRepository.text = detailUserItem.repository.toString()
+                        tvBlog.text = detailUserItem.blog
+                        tvCompany.text = detailUserItem.company
                     }
-
-
-
             }
         })
 

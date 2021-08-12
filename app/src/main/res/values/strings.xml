@@ -1,14 +1,10 @@
 <resources>
     <string name="app_name">Github User</string>
-    <string name="dummy_name">Naufal Fadhil Athallah</string>
-    <string name="dummy_username">naufalfadhil</string>
-    <string name="location">Bogor, Indonesia</string>
-    <string name="dummy_number">99</string>
-    <string name="stringFollowers">Followers:</string>
-    <string name="stringFollowing">Following:</string>
+    <string name="dummy_string">lorem ipsum</string>
+    <string name="dummy_number">00</string>
     <string name="followers">FOLLOWERS</string>
     <string name="following">FOLLOWING</string>
-    <string name="repository">REPOSITORY</string>
+    <string name="repository">REPO</string>
     <string name="logo_github">Logo Github</string>
     <string name="search">search</string>
     <string name="search_hint">input name</string>

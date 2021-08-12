@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:maxLines="2"
-        android:text="@string/dummy_username"
+        android:text="@string/dummy_string"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/img_avatar"
