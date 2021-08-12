@@ -155,7 +155,7 @@ class MainViewModel : ViewModel() {
             ) {
                 val listItems = ArrayList<User>()
                 val result = String(responseBody)
-                log.d("myResult", result.toString())
+                log.d("myResult", result)
                 try {
                     val responseArray = JSONArray(result)
                     log.d("myResponseArray", responseArray.toString())
@@ -213,7 +213,7 @@ class MainViewModel : ViewModel() {
             ) {
                 val listItems = ArrayList<User>()
                 val result = String(responseBody)
-                log.d("myResult", result.toString())
+                log.d("myResult", result)
                 try {
                     val responseArray = JSONArray(result)
                     log.d("myResponseArray", responseArray.toString())

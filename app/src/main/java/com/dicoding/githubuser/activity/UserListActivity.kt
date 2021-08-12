@@ -9,7 +9,6 @@ import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-//import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.githubuser.R
 import com.dicoding.githubuser.model.User
@@ -25,10 +24,6 @@ class UserListActivity : AppCompatActivity() {
     private lateinit var adapter: ListUserAdapter
     private lateinit var mainViewModel: MainViewModel
 
-    companion object {
-        private val TAG = UserListActivity::class.java.simpleName
-    }
-
     private fun showSelectedUser(user: User) {
         val moveDetailIntent= Intent(this@UserListActivity, DetailActivity::class.java)
         moveDetailIntent.putExtra(DetailActivity.EXTRA_USER, user)
@@ -43,16 +38,21 @@ class UserListActivity : AppCompatActivity() {
         adapter = ListUserAdapter()
         adapter.notifyDataSetChanged()
 
+
+        showSearchNotFound(true)
         showLoading(false)
         showRecyclerList()
 
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
             MainViewModel::class.java)
         mainViewModel.getUsers().observe(this, {
-            User -> if (User != null) {
-                    adapter.setData(User)
-                    showLoading(false)
-                }
+            User -> if (User.isEmpty()) {
+                        showSearchNotFound(true)
+                        showRecyclerView(false)
+                    } else if (User != null) {
+                        showLoading(false)
+                        adapter.setData(User)
+                    }
         })
     }
 
@@ -107,23 +107,20 @@ class UserListActivity : AppCompatActivity() {
             }
 
             override fun onQueryTextChange(newText: String): Boolean {
-                if (newText.isEmpty()) {
-                    showLoading(false)
+                return if (newText.isEmpty()) {
                     showSearchNotFound(true)
+                    showLoading(false)
                     showRecyclerView(false)
-                    return true
+                    true
                 } else {
-                    showRecyclerView(true)
                     showSearchNotFound(false)
+                    showRecyclerView(true)
                     mainViewModel.setUser(newText)
-                    return true
+                    true
                 }
             }
         })
         return true
-
-        menuInflater.inflate(R.menu.option_menu, menu)
-        return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -2,7 +2,6 @@ package com.dicoding.githubuser.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
@@ -13,22 +12,15 @@ import com.dicoding.githubuser.adapter.ListUserAdapter
 import com.dicoding.githubuser.model.User
 import com.dicoding.githubuser.adapter.SectionsPagerAdapter
 import com.dicoding.githubuser.databinding.ActivityDetailBinding
-import com.dicoding.githubuser.fragment.FollowersFragment
 import com.dicoding.githubuser.viewmodel.MainViewModel
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.loopj.android.http.AsyncHttpClient
-import de.hdodenhof.circleimageview.CircleImageView
-import android.util.Log
 import com.loopj.android.http.AsyncHttpClient.log
 
 class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
     private lateinit var mainViewModel: MainViewModel
-    private lateinit var adapter: ListUserAdapter
-
-    private var dataUser: User? = null
 
     companion object {
         const val EXTRA_USER = "extra_user"

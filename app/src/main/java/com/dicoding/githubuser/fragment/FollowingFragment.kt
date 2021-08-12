@@ -36,7 +36,7 @@ class FollowingFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentFollowingBinding.inflate(inflater, container, false)
         return binding.root
@@ -45,7 +45,7 @@ class FollowingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val username = arguments?.getString(FollowingFragment.ARG_USERNAME)
+        val username = arguments?.getString(ARG_USERNAME)
 
         adapter = ListUserAdapter()
         adapter.notifyDataSetChanged()

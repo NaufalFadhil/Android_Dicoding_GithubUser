@@ -185,7 +185,8 @@
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_avatar"
-            app:srcCompat="@drawable/ic_baseline_person_24" />
+            app:srcCompat="@drawable/ic_baseline_person_24"
+            android:contentDescription="@string/dummy_string"/>
 
         <ImageView
             android:id="@+id/imageView4"
@@ -195,7 +196,8 @@
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:srcCompat="@drawable/ic_baseline_home_24" />
+            app:srcCompat="@drawable/ic_baseline_home_24"
+            android:contentDescription="@string/dummy_string"/>
 
         <ImageView
             android:id="@+id/imageView5"
@@ -205,7 +207,8 @@
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_avatar"
-            app:srcCompat="@drawable/ic_baseline_work_24" />
+            app:srcCompat="@drawable/ic_baseline_work_24"
+            android:contentDescription="@string/dummy_string"/>
 
         <ImageView
             android:id="@+id/imageView6"
@@ -215,7 +218,8 @@
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView5"
-            app:srcCompat="@drawable/ic_baseline_vpn_lock_24" />
+            app:srcCompat="@drawable/ic_baseline_vpn_lock_24"
+            android:contentDescription="@string/dummy_string" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

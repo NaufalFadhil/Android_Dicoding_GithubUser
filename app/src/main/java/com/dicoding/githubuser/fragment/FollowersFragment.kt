@@ -8,11 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dicoding.githubuser.R
 import com.dicoding.githubuser.activity.DetailActivity
-import com.dicoding.githubuser.activity.UserListActivity
 import com.dicoding.githubuser.adapter.ListUserAdapter
-import com.dicoding.githubuser.databinding.ActivityUserListBinding
 import com.dicoding.githubuser.databinding.FragmentFollowersBinding
 import com.dicoding.githubuser.model.User
 import com.dicoding.githubuser.viewmodel.MainViewModel
@@ -39,7 +36,7 @@ class FollowersFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentFollowersBinding.inflate(inflater, container, false)
         return binding.root
