@@ -19,7 +19,6 @@ import com.dicoding.githubuser.viewmodel.MainViewModel
 
 class FollowersFragment : Fragment() {
 
-
     private lateinit var adapter: ListUserAdapter
     private lateinit var mainViewModel: MainViewModel
     private var _binding: FragmentFollowersBinding? = null

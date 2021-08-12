@@ -192,11 +192,11 @@ class MainViewModel : ViewModel() {
         return listFollowers
     }
 
-    fun setFollowing(urlDetail: String) {
+    fun setFollowing(username: String?) {
         val client = AsyncHttpClient()
-//        client.addHeader("Authorization", "token <ReviewerTokenPlease>")
+      //client.addHeader("Authorization", "token <ReviewerTokenPlease>")
         client.addHeader("User-Agent", "request")
-        val url = urlDetail
+        val url = "https://api.github.com/users/${username}/following"
         client.get(url, object : AsyncHttpResponseHandler() {
             override fun onSuccess(
                 statusCode: Int,
@@ -205,25 +205,28 @@ class MainViewModel : ViewModel() {
             ) {
                 val listItems = ArrayList<User>()
                 val result = String(responseBody)
+                log.d("myResult", result.toString())
                 try {
-                    val responseObject = JSONObject(result)
-                    log.d("response", responseObject.toString())
+                    val responseArray = JSONArray(result)
+                    log.d("myResponseArray", responseArray.toString())
+                    for (i in 0 until responseArray.length()) {
+                        val responObjects = responseArray.getJSONObject(i)
+                        log.d("myResponseObject", responObjects.toString())
+                        val url = responObjects.getString("url")
+                        val username = responObjects.getString("login")
+                        val avatar = responObjects.getString("avatar_url")
 
-                    for (i in 0 until responseObject.length()) {
-                        val url = responseObject.getString("url")
-                        val username = responseObject.getString("login")
-                        val avatar = responseObject.getString("avatar_url")
-
-                        val user = User()
-                        user.url = url
-                        user.avatar = avatar
-                        user.username = username
-                        listItems.add(user)
-                        log.d("output nihh", listItems.toString())
+                        val following = User()
+                        following.url = url.toString()
+                        following.avatar = avatar
+                        following.username = username
+                        listItems.add(following)
+                        log.d("myTrySetUser", following.toString())
                     }
-                    listUsers.postValue(listItems)
+                    listFollowing.postValue(listItems)
                 } catch (e: Exception) {
-                    Log.d("Exception", e.printStackTrace().toString())
+                    e.printStackTrace()
+                    Log.d("myExceptionSetUser", e.printStackTrace().toString())
                 }
             }
 
