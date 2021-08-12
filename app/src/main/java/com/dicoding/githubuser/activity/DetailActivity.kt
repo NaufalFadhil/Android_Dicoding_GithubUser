@@ -19,7 +19,8 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.loopj.android.http.AsyncHttpClient
 import de.hdodenhof.circleimageview.CircleImageView
-import kotlin.math.log
+import android.util.Log
+import com.loopj.android.http.AsyncHttpClient.log
 
 class DetailActivity : AppCompatActivity() {
 
@@ -44,44 +45,33 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val url = intent.getStringExtra("url")
-        val fragment = FollowersFragment.newInstance(url)
-
-        val imgAvatar: CircleImageView = binding.imgAvatar
-        val tvUsername: TextView = binding.tvUsername
-        val tvName: TextView = binding.tvName
-        val tvFollowers: TextView = binding.tvFollowers
-        val tvFollowing: TextView = binding.tvFollowing
-        val tvLocation: TextView = binding.tvLocation
-
-
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
             MainViewModel::class.java)
 
         val user = intent.getParcelableExtra<User>(EXTRA_USER) as User
         mainViewModel.setDetail(user.username)
 
-//        mainViewModel.getDetails().observe(this, {
-//                detailUserItem -> if (detailUserItem != null) {
-//                with(binding) {
-//                    Glide.with(this@DetailActivity)
-//                        .load(user.avatar)
-//                        .apply(RequestOptions().override(90,90))
-//                        .into(imgAvatar)
-//                    tvName.text = detailUserItem.name
-//                    tvUsername.text = detailUserItem.username
-//                    tvLocation.text = detailUserItem.location
-//                    tvFollowers.text = detailUserItem.followers.toString()
-//                    tvFollowing.text = detailUserItem.following.toString()
-////                    tvRepository.text = user.repository.toString()
-//                }
-//
-//            }
-//        })
+        mainViewModel.getDetail().observe(this, {
+                detailUserItem -> if (detailUserItem != null) {
+//                    adapter.setData(detailUserItem)
+                    with(binding) {
+                        Glide.with(this@DetailActivity)
+                            .load(detailUserItem.avatar)
+                            .apply(RequestOptions().override(90,90))
+                            .into(imgAvatar)
+                        log.d("apa yaa", detailUserItem.toString())
+                        tvName.text = detailUserItem.name
+                        tvUsername.text = detailUserItem.username
+                        tvLocation.text = detailUserItem.location
+                        tvFollowers.text = detailUserItem.followers.toString()
+                        tvFollowing.text = detailUserItem.following.toString()
+//                        tvRepository.text = user.repository.toString()
+                    }
 
 
 
-//        val tvRepository: TextView = binding.tvRepository
+            }
+        })
 
         tabLayoutAdapter(user.username)
 

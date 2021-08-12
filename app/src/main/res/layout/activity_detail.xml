@@ -50,7 +50,7 @@
             app:layout_constraintStart_toEndOf="@+id/img_avatar"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+         <TextView
             android:id="@+id/tv_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

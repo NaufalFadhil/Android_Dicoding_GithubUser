@@ -79,7 +79,7 @@ class MainViewModel : ViewModel() {
     fun setDetail(username: String?) {
         val url = "https://api.github.com/users/${username}"
         val client = AsyncHttpClient()
-        client.addHeader("Authorization", "token")
+      //client.addHeader("Authorization", "token")
         client.addHeader("User-Agent", "request")
         client.get(url, object : AsyncHttpResponseHandler() {
             override fun onSuccess(
@@ -87,7 +87,6 @@ class MainViewModel : ViewModel() {
                 headers: Array<out Header>?,
                 responseBody: ByteArray
             ) {
-                val listItems = ArrayList<User>()
                 val result = String(responseBody)
                 try {
                     val responseObject = JSONObject(result)
@@ -97,12 +96,21 @@ class MainViewModel : ViewModel() {
                         val username = responseObject.getString("login")
                         val name = responseObject.getString("name")
                         val avatar = responseObject.getString("avatar_url")
+                        val followers = responseObject.getInt("followers")
+                        val following = responseObject.getInt("following")
+                        val repository = responseObject.getInt("public_repos")
+                        val bio = responseObject.getString("bio")
+                        val location = responseObject.getString("location")
+                        val blog = responseObject.getString("blog")
 
                         val detailUserItem = User()
                         detailUserItem.avatar = avatar
                         detailUserItem.username = username
                         detailUserItem.name = name
-                        log.d("output nihh", listItems.toString())
+                        detailUserItem.followers = followers
+                        detailUserItem.following = following
+                        detailUserItem.repository = repository
+                        log.d("output nihh", detailUserItem.toString())
 
                         detailUser.postValue(detailUserItem)
                     }
@@ -128,10 +136,9 @@ class MainViewModel : ViewModel() {
         })
     }
 
-    fun getDetails(): LiveData<ArrayList<User>> {
-        return listUsers
+    fun getDetail(): LiveData<User> {
+        return detailUser
     }
-
 
     fun setFollowers(username: String?) {
         val client = AsyncHttpClient()
