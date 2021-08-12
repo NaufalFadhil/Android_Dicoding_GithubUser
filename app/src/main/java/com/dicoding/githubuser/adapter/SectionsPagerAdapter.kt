@@ -7,6 +7,9 @@ import com.dicoding.githubuser.fragment.FollowersFragment
 import com.dicoding.githubuser.fragment.FollowingFragment
 
 class SectionsPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
+
+    var username: String? = null
+
     override fun getItemCount(): Int {
         return 2
     }
@@ -14,7 +17,7 @@ class SectionsPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(a
     override fun createFragment(position: Int): Fragment {
         var fragment: Fragment? = null
         when (position) {
-            0 -> fragment = FollowersFragment()
+            0 -> fragment = FollowersFragment.newInstance(username)
             1 -> fragment = FollowingFragment()
         }
         return fragment as Fragment
