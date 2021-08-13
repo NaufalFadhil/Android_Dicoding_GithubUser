@@ -1,17 +1,16 @@
 package com.dicoding.githubuser.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.annotation.StringRes
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.dicoding.githubuser.R
-import com.dicoding.githubuser.adapter.ListUserAdapter
-import com.dicoding.githubuser.model.User
 import com.dicoding.githubuser.adapter.SectionsPagerAdapter
 import com.dicoding.githubuser.databinding.ActivityDetailBinding
+import com.dicoding.githubuser.model.User
 import com.dicoding.githubuser.viewmodel.MainViewModel
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -38,29 +37,30 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
-            MainViewModel::class.java)
+            MainViewModel::class.java
+        )
 
         val user = intent.getParcelableExtra<User>(EXTRA_USER) as User
         mainViewModel.setDetail(user.username)
 
-        mainViewModel.getDetail().observe(this, {
-                detailUserItem -> if (detailUserItem != null) {
+        mainViewModel.getDetail().observe(this, { detailUserItem ->
+            if (detailUserItem != null) {
 //                    adapter.setData(detailUserItem)
-                    with(binding) {
-                        Glide.with(this@DetailActivity)
-                            .load(detailUserItem.avatar)
-                            .apply(RequestOptions().override(90,90))
-                            .into(imgAvatar)
-                        log.d("apa yaa", detailUserItem.toString())
-                        tvName.text = detailUserItem.name
-                        tvUsername.text = detailUserItem.username
-                        tvLocation.text = detailUserItem.location
-                        tvFollowers.text = detailUserItem.followers.toString()
-                        tvFollowing.text = detailUserItem.following.toString()
-                        tvRepository.text = detailUserItem.repository.toString()
-                        tvBlog.text = detailUserItem.blog
-                        tvCompany.text = detailUserItem.company
-                    }
+                with(binding) {
+                    Glide.with(this@DetailActivity)
+                        .load(detailUserItem.avatar)
+                        .apply(RequestOptions().override(90, 90))
+                        .into(imgAvatar)
+                    log.d("apa yaa", detailUserItem.toString())
+                    tvName.text = detailUserItem.name
+                    tvUsername.text = detailUserItem.username
+                    tvLocation.text = detailUserItem.location
+                    tvFollowers.text = detailUserItem.followers.toString()
+                    tvFollowing.text = detailUserItem.following.toString()
+                    tvRepository.text = detailUserItem.repository.toString()
+                    tvBlog.text = detailUserItem.blog
+                    tvCompany.text = detailUserItem.company
+                }
             }
         })
 
@@ -74,8 +74,8 @@ class DetailActivity : AppCompatActivity() {
         val viewPager: ViewPager2 = findViewById(R.id.view_pager)
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = findViewById(R.id.tabs)
-        TabLayoutMediator(tabs, viewPager) {
-                tab, position -> tab.text = resources.getString(TAB_TITLES[position])
+        TabLayoutMediator(tabs, viewPager) { tab, position ->
+            tab.text = resources.getString(TAB_TITLES[position])
         }.attach()
 
         supportActionBar?.elevation = 0f

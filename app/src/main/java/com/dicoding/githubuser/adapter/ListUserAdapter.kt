@@ -19,11 +19,6 @@ class ListUserAdapter : RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
         notifyDataSetChanged()
     }
 
-    fun clearData() {
-        userData.drop(userData.size)
-        notifyDataSetChanged()
-    }
-
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
     }
@@ -49,11 +44,7 @@ class ListUserAdapter : RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
                     .load(user.avatar)
                     .apply(RequestOptions().override(90,90))
                     .into(imgAvatar)
-
                 binding.tvUsername.text = user.username
-//                binding.tvItemFollowers.text = user.followers
-//                binding.tvItemFollowing.text = user.following
-
                 itemView.setOnClickListener{onItemClickCallback?.onItemClicked(user) }
             }
         }

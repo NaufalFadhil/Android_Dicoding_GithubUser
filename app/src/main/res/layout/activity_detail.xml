@@ -37,7 +37,7 @@
 
         <TextView
             android:id="@+id/tv_blog"
-            android:layout_width="190dp"
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="2dp"
             android:text="@string/dummy_string"
@@ -51,7 +51,7 @@
             android:id="@+id/img_avatar"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             app:civ_border_color="#FF909090"
             app:civ_border_width="2dp"
@@ -60,10 +60,11 @@
 
         <TextView
             android:id="@+id/tv_name"
-            android:layout_width="270dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/dummy_string"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -86,7 +87,7 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="100dp"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
@@ -99,64 +100,66 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="100dp"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/following"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/repository"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
         <TextView
             android:id="@+id/tv_followers"
-            android:layout_width="100dp"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/dummy_number"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/img_avatar"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <TextView
             android:id="@+id/tv_following"
-            android:layout_width="100dp"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/dummy_number"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/tv_followers"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/tv_repository"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:text="@string/dummy_number"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/tv_following"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <com.google.android.material.tabs.TabLayout
@@ -181,45 +184,45 @@
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:contentDescription="@string/dummy_string"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_avatar"
-            app:srcCompat="@drawable/ic_baseline_person_24"
-            android:contentDescription="@string/dummy_string"/>
+            app:srcCompat="@drawable/ic_baseline_person_24" />
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:contentDescription="@string/dummy_string"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:srcCompat="@drawable/ic_baseline_home_24"
-            android:contentDescription="@string/dummy_string"/>
+            app:srcCompat="@drawable/ic_baseline_home_24" />
 
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/dummy_string"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_avatar"
-            app:srcCompat="@drawable/ic_baseline_work_24"
-            android:contentDescription="@string/dummy_string"/>
+            app:srcCompat="@drawable/ic_baseline_work_24" />
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/dummy_string"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView5"
-            app:srcCompat="@drawable/ic_baseline_vpn_lock_24"
-            android:contentDescription="@string/dummy_string" />
+            app:srcCompat="@drawable/ic_baseline_vpn_lock_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
