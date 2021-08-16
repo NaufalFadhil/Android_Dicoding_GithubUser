@@ -9,4 +9,5 @@
     <string name="search">mencari</string>
     <string name="search_hint">Masukkan nama pengguna</string>
     <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
+    <string name="button_favorite">Favorite Button</string>
 </resources>
