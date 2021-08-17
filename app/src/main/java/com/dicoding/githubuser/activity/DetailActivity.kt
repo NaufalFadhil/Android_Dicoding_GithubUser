@@ -66,6 +66,13 @@ class DetailActivity : AppCompatActivity() {
 
         tabLayoutAdapter(user.username)
 
+        var statusFavorite = false
+        setStatusFavorite(statusFavorite)
+        binding.btnFavorite.setOnClickListener {
+            statusFavorite = !statusFavorite
+            setStatusFavorite(statusFavorite)
+        }
+
     }
 
     private fun tabLayoutAdapter(username: String?) {
@@ -81,11 +88,12 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.elevation = 0f
     }
 
-//    private fun showLoading(state: Boolean) {
-//        if (state) {
-//            binding.progressBar.visibility = View.VISIBLE
-//        } else {
-//            binding.progressBar.visibility = View.GONE
-//        }
-//    }
+    private fun setStatusFavorite(status: Boolean) {
+        if(status) {
+            binding.btnFavorite.setImageResource(R.drawable.ic_baseline_favorite_24)
+        } else {
+            binding.btnFavorite.setImageResource(R.drawable.ic_baseline_not_favorite_24)
+        }
+    }
+
 }

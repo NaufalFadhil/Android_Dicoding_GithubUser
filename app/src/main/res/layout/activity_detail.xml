@@ -234,7 +234,8 @@
             android:contentDescription="@string/button_favorite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tabs"
-            app:srcCompat="@drawable/ic_baseline_star_24" />
+            app:srcCompat="@drawable/ic_baseline_not_favorite_24"
+            android:backgroundTint="@color/white"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
