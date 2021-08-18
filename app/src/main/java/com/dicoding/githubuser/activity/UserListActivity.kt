@@ -38,7 +38,6 @@ class UserListActivity : AppCompatActivity() {
         adapter = ListUserAdapter()
         adapter.notifyDataSetChanged()
 
-
         showSearchNotFound(true)
         showLoading(false)
         showRecyclerList()

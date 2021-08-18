@@ -1,6 +1,9 @@
 package com.dicoding.githubuser.activity
 
+import android.content.ContentValues
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -10,6 +13,8 @@ import com.bumptech.glide.request.RequestOptions
 import com.dicoding.githubuser.R
 import com.dicoding.githubuser.adapter.SectionsPagerAdapter
 import com.dicoding.githubuser.databinding.ActivityDetailBinding
+import com.dicoding.githubuser.db.DatabaseContract
+import com.dicoding.githubuser.db.FavoriteHelper
 import com.dicoding.githubuser.model.User
 import com.dicoding.githubuser.viewmodel.MainViewModel
 import com.google.android.material.tabs.TabLayout
@@ -20,9 +25,19 @@ class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
     private lateinit var mainViewModel: MainViewModel
+    private lateinit var favoriteHelper: FavoriteHelper
+
+    private var position: Int = 0
+    private var isFavorite = false
 
     companion object {
         const val EXTRA_USER = "extra_user"
+        const val EXTRA_FAVORITE = "extra_favorite"
+        const val EXTRA_POSITION = "extra_position"
+        const val REQUEST_ADD = 100
+        const val RESULT_ADD = 101
+        const val REQUEST_DELETE = 200
+        const val RESULT_DELETE = 201
 
         @StringRes
         private val TAB_TITLES = intArrayOf(
@@ -36,16 +51,22 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
-            MainViewModel::class.java
-        )
+        favoriteHelper = FavoriteHelper.getInstance(applicationContext)
+        favoriteHelper.open()
 
-        val user = intent.getParcelableExtra<User>(EXTRA_USER) as User
+        var user = intent.getParcelableExtra<User>(EXTRA_USER) as User
+
+        if (user != null) {
+            position = intent.getIntExtra(EXTRA_POSITION, 0)
+//            isFavorite = false
+        } else {
+            user = User()
+        }
+
+        mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
         mainViewModel.setDetail(user.username)
-
         mainViewModel.getDetail().observe(this, { detailUserItem ->
             if (detailUserItem != null) {
-//                    adapter.setData(detailUserItem)
                 with(binding) {
                     Glide.with(this@DetailActivity)
                         .load(detailUserItem.avatar)
@@ -66,13 +87,56 @@ class DetailActivity : AppCompatActivity() {
 
         tabLayoutAdapter(user.username)
 
-        var statusFavorite = false
-        setStatusFavorite(statusFavorite)
+        // Love button clicked
+        changeFavoriteIcon(isFavorite)
         binding.btnFavorite.setOnClickListener {
-            statusFavorite = !statusFavorite
-            setStatusFavorite(statusFavorite)
+            isFavorite = !isFavorite
+            changeFavoriteIcon(isFavorite)
+            setFavoriteList(isFavorite, user)
         }
+    }
 
+    private fun changeFavoriteIcon(isFavorite: Boolean){
+        if(isFavorite) {
+            binding.btnFavorite.setImageResource(R.drawable.ic_baseline_favorite_24)
+        } else {
+            binding.btnFavorite.setImageResource(R.drawable.ic_baseline_not_favorite_24)
+        }
+    }
+
+    private fun setFavoriteList(isFavorite: Boolean, user: User) {
+        if(isFavorite) {
+            try {
+                log.d("MyLog", "Mau insert nih")
+                val values = ContentValues()
+                values.put(DatabaseContract.FavoriteColumns.USERNAME, user.username)
+                values.put(DatabaseContract.FavoriteColumns.AVATAR, user.avatar)
+
+                val result = favoriteHelper.insert(values)
+                user.username = result.toString()
+                setResult(RESULT_ADD, intent)
+                changeFavoriteIcon(isFavorite)
+            } catch (e: Exception) {
+                log.d("MyLog", "Gagal Memasukkan ke database")
+            }
+        } else {
+            try {
+                log.d("MyLog", "Mau ngapus")
+                deleteUser(user)
+            } catch (e: Exception) {
+                log.d("MyLog", "Gagal Menghapus ke database")
+            }
+        }
+    }
+
+    private fun deleteUser(user: User) {
+        val result = favoriteHelper.deleteByUsername(user.username)
+        user.username = result.toString()
+        val intent = Intent()
+        intent.putExtra(EXTRA_POSITION, position)
+        setResult(RESULT_DELETE, intent)
+        isFavorite = isFavorite
+        changeFavoriteIcon(isFavorite)
     }
 
     private fun tabLayoutAdapter(username: String?) {
@@ -86,14 +150,6 @@ class DetailActivity : AppCompatActivity() {
         }.attach()
 
         supportActionBar?.elevation = 0f
-    }
-
-    private fun setStatusFavorite(status: Boolean) {
-        if(status) {
-            binding.btnFavorite.setImageResource(R.drawable.ic_baseline_favorite_24)
-        } else {
-            binding.btnFavorite.setImageResource(R.drawable.ic_baseline_not_favorite_24)
-        }
     }
 
 }

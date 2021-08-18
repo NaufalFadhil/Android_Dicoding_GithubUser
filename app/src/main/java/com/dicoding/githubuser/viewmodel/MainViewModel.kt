@@ -92,6 +92,7 @@ class MainViewModel : ViewModel() {
                     log.d("response", responseObject.toString())
 
                     for (i in 0 until responseObject.length()) {
+                        val id = responseObject.getInt("id")
                         val username = responseObject.getString("login")
                         val name = responseObject.getString("name")
                         val avatar = responseObject.getString("avatar_url")

@@ -23,6 +23,30 @@ class ListUserAdapter : RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
         this.onItemClickCallback = onItemClickCallback
     }
 
+    var listFavorite = ArrayList<User>()
+        set(listNotes) {
+            if (listNotes.size > 0) {
+                this.listFavorite.clear()
+            }
+            this.listFavorite.addAll(listNotes)
+            notifyDataSetChanged()
+        }
+
+    fun addItem(favorite: User) {
+        this.listFavorite.add(favorite)
+        notifyItemInserted(this.listFavorite.size - 1)
+    }
+    fun updateItem(position: Int, favorite: User) {
+        this.listFavorite[position] = favorite
+        notifyItemChanged(position, favorite)
+    }
+    fun removeItem(position: Int) {
+        this.listFavorite.removeAt(position)
+        notifyItemRemoved(position)
+        notifyItemRangeChanged(position, this.listFavorite.size)
+    }
+
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
