@@ -4,9 +4,9 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
-import android.provider.BaseColumns._ID
 import com.dicoding.githubuser.db.DatabaseContract.FavoriteColumns.Companion.TABLE_NAME
 import com.dicoding.githubuser.db.DatabaseContract.FavoriteColumns.Companion.USERNAME
+import com.dicoding.githubuser.db.DatabaseContract.FavoriteColumns.Companion._ID
 import java.sql.SQLException
 
 class FavoriteHelper(context: Context) {
@@ -44,7 +44,8 @@ class FavoriteHelper(context: Context) {
             null,
             null,
             null,
-            "$_ID ASC"
+            "$_ID ASC",
+            null
         )
     }
 
@@ -52,7 +53,7 @@ class FavoriteHelper(context: Context) {
         return database.query(
             DATABASE_TABLE,
             null,
-            "$USERNAME = ?",
+            "$_ID = ?",
             arrayOf(username),
             null,
             null,
@@ -65,7 +66,7 @@ class FavoriteHelper(context: Context) {
         return database.insert(DATABASE_TABLE, null, values)
     }
 
-    fun deleteByUsername(username: String?): Int {
-        return database.delete(DATABASE_TABLE, "$USERNAME = $username", null)
+    fun deleteById(id: String?): Int {
+        return database.delete(DATABASE_TABLE, "$USERNAME = '$id'", null)
     }
 }

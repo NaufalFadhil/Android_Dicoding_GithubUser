@@ -24,7 +24,7 @@ class UserListActivity : AppCompatActivity() {
     private lateinit var adapter: ListUserAdapter
     private lateinit var mainViewModel: MainViewModel
 
-    private fun showSelectedUser(user: User) {
+    private fun showSelectedUser(user: User, position: Int) {
         val moveDetailIntent= Intent(this@UserListActivity, DetailActivity::class.java)
         moveDetailIntent.putExtra(DetailActivity.EXTRA_USER, user)
         startActivity(moveDetailIntent)
@@ -60,9 +60,9 @@ class UserListActivity : AppCompatActivity() {
         binding.rvUsers.layoutManager = LinearLayoutManager(this)
         binding.rvUsers.adapter = adapter
 
-        adapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback{
-            override fun onItemClicked(data: User) {
-                showSelectedUser(data)
+        adapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: User, position: Int) {
+                showSelectedUser(data, position)
             }
         })
     }
@@ -125,9 +125,16 @@ class UserListActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.action_change_settings) {
-            val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
-            startActivity(mIntent)
+        when (item.itemId) {
+            R.id.action_change_settings -> {
+                val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
+                startActivity(mIntent)
+            }
+            R.id.favorite -> {
+                val mIntent = Intent(this, FavoriteActivity::class.java)
+                startActivity(mIntent)
+            }
+            else -> return true
         }
         return super.onOptionsItemSelected(item)
     }

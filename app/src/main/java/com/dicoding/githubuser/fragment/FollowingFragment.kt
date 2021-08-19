@@ -77,14 +77,14 @@ class FollowingFragment : Fragment() {
         binding.rvUsers.layoutManager = LinearLayoutManager(activity)
         binding.rvUsers.adapter = adapter
 
-        adapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback{
-            override fun onItemClicked(data: User) {
-                showSelectedUser(data)
+        adapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: User, position: Int) {
+                showSelectedUser(data, position)
             }
         })
     }
 
-    private fun showSelectedUser(user: User) {
+    private fun showSelectedUser(user: User, position: Int) {
         val moveDetailIntent= Intent(activity, DetailActivity::class.java)
         moveDetailIntent.putExtra(DetailActivity.EXTRA_USER, user)
         startActivity(moveDetailIntent)

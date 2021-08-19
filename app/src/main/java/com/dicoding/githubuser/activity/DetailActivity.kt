@@ -27,6 +27,7 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var mainViewModel: MainViewModel
     private lateinit var favoriteHelper: FavoriteHelper
 
+    private var userModel: User? = null
     private var position: Int = 0
     private var isFavorite = false
 
@@ -55,12 +56,15 @@ class DetailActivity : AppCompatActivity() {
         favoriteHelper.open()
 
         var user = intent.getParcelableExtra<User>(EXTRA_USER) as User
+        position = intent.getIntExtra(EXTRA_POSITION, 0)
+        userModel = User()
 
         if (user != null) {
             position = intent.getIntExtra(EXTRA_POSITION, 0)
-//            isFavorite = false
+            isFavorite = false
         } else {
             user = User()
+            isFavorite = true
         }
 
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
@@ -108,14 +112,9 @@ class DetailActivity : AppCompatActivity() {
         if(isFavorite) {
             try {
                 log.d("MyLog", "Mau insert nih")
-                val values = ContentValues()
-                values.put(DatabaseContract.FavoriteColumns.USERNAME, user.username)
-                values.put(DatabaseContract.FavoriteColumns.AVATAR, user.avatar)
-
-                val result = favoriteHelper.insert(values)
-                user.username = result.toString()
-                setResult(RESULT_ADD, intent)
+                insertUser(user)
                 changeFavoriteIcon(isFavorite)
+                log.d("MyLog", "Behasil inser")
             } catch (e: Exception) {
                 log.d("MyLog", "Gagal Memasukkan ke database")
             }
@@ -123,14 +122,25 @@ class DetailActivity : AppCompatActivity() {
             try {
                 log.d("MyLog", "Mau ngapus")
                 deleteUser(user)
+                log.d("MyLog", "Behasil hapus")
             } catch (e: Exception) {
                 log.d("MyLog", "Gagal Menghapus ke database")
             }
         }
     }
 
+    private fun insertUser(user: User) {
+        val values = ContentValues()
+        values.put(DatabaseContract.FavoriteColumns.USERNAME, user.username)
+        values.put(DatabaseContract.FavoriteColumns.AVATAR, user.avatar)
+
+        val result = favoriteHelper.insert(values)
+        user.username = result.toString()
+        setResult(RESULT_ADD, intent)
+    }
+
     private fun deleteUser(user: User) {
-        val result = favoriteHelper.deleteByUsername(user.username)
+        val result = favoriteHelper.deleteById(user.username)
         user.username = result.toString()
         val intent = Intent()
         intent.putExtra(EXTRA_POSITION, position)
