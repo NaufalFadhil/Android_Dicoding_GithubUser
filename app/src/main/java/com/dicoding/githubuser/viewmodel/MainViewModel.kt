@@ -166,11 +166,12 @@ class MainViewModel : ViewModel() {
                     for (i in 0 until responseArray.length()) {
                         val responObjects = responseArray.getJSONObject(i)
                         log.d("myResponseObject", responObjects.toString())
-                        val url = responObjects.getString("url")
+                        val id = responObjects.getInt("id")
                         val username = responObjects.getString("login")
                         val avatar = responObjects.getString("avatar_url")
 
                         val follower = User()
+                        follower.id = id
                         follower.avatar = avatar
                         follower.username = username
                         listItems.add(follower)
@@ -224,11 +225,12 @@ class MainViewModel : ViewModel() {
                     for (i in 0 until responseArray.length()) {
                         val responObjects = responseArray.getJSONObject(i)
                         log.d("myResponseObject", responObjects.toString())
-                        val url = responObjects.getString("url")
+                        val id = responObjects.getInt("id")
                         val username = responObjects.getString("login")
                         val avatar = responObjects.getString("avatar_url")
 
                         val following = User()
+                        following.id = id
                         following.avatar = avatar
                         following.username = username
                         listItems.add(following)

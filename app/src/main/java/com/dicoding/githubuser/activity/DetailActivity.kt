@@ -138,15 +138,12 @@ class DetailActivity : AppCompatActivity() {
         values.put(DatabaseContract.FavoriteColumns._ID, user.id)
         values.put(DatabaseContract.FavoriteColumns.USERNAME, user.username)
         values.put(DatabaseContract.FavoriteColumns.AVATAR, user.avatar)
-
-        val result = favoriteHelper.insert(values)
-        user.username = result.toString()
+        favoriteHelper.insert(values)
         setResult(RESULT_ADD, intent)
     }
 
     private fun deleteUser(user: User) {
-        val result = favoriteHelper.deleteById(user.id.toString())
-        user.username = result.toString()
+        favoriteHelper.deleteById(user.id.toString())
         val intent = Intent()
         intent.putExtra(EXTRA_POSITION, position)
         setResult(RESULT_DELETE, intent)
