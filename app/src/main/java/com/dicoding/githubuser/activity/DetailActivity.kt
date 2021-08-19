@@ -2,6 +2,7 @@ package com.dicoding.githubuser.activity
 
 import android.content.ContentValues
 import android.content.Intent
+import android.database.Cursor
 import android.os.Bundle
 import android.widget.Toast
 import androidx.annotation.StringRes
@@ -59,12 +60,12 @@ class DetailActivity : AppCompatActivity() {
         position = intent.getIntExtra(EXTRA_POSITION, 0)
         userModel = User()
 
-        if (user != null) {
-            position = intent.getIntExtra(EXTRA_POSITION, 0)
-            isFavorite = false
-        } else {
-            user = User()
-        }
+//        if (user != null) {
+//            position = intent.getIntExtra(EXTRA_POSITION, 0)
+//            isFavorite = false
+//        } else {
+//            user = User()
+//        }
 
         log.d("MyUser", user.toString())
         log.d("MyPosition", position.toString())
@@ -96,11 +97,19 @@ class DetailActivity : AppCompatActivity() {
         tabLayoutAdapter(user.username)
 
         // Love button clicked
-        changeFavoriteIcon(isFavorite)
+        cekFavorite(user)
         binding.btnFavorite.setOnClickListener {
             isFavorite = !isFavorite
             changeFavoriteIcon(isFavorite)
             setFavoriteList(isFavorite, user)
+        }
+    }
+
+    private fun cekFavorite(user: User){
+        val cursor: Cursor = favoriteHelper.queryById(user.id.toString())
+        if (cursor.moveToNext()) {
+            isFavorite = true
+            changeFavoriteIcon(isFavorite)
         }
     }
 
@@ -162,6 +171,10 @@ class DetailActivity : AppCompatActivity() {
         }.attach()
 
         supportActionBar?.elevation = 0f
+    }
+
+    override fun onBackPressed() {
+        showAlertDialog(ALERT_DIALOG_CLOSE)
     }
 
 }
