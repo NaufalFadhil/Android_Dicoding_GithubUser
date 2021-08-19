@@ -39,16 +39,18 @@ class MainViewModel : ViewModel() {
 
                     for (i in 0 until items.length()) {
                         val item = items.getJSONObject(i)
-                        val url = item.getString("url")
+                        val id = item.getInt("id")
                         val username = item.getString("login")
                         val avatar = item.getString("avatar_url")
 
                         val user = User()
+                        user.id = id
                         user.avatar = avatar
                         user.username = username
                         listItems.add(user)
                     }
                     listUsers.postValue(listItems)
+                    Log.d("MyListUsersItem", listItems.toString())
                 } catch (e: Exception) {
                     Log.d("Exception", e.printStackTrace().toString())
                 }
@@ -104,6 +106,7 @@ class MainViewModel : ViewModel() {
                         val blog = responseObject.getString("blog")
 
                         val detailUserItem = User()
+                        detailUserItem.avatar = id.toString()
                         detailUserItem.avatar = avatar
                         detailUserItem.username = username
                         detailUserItem.name = name

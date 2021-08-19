@@ -64,8 +64,12 @@ class DetailActivity : AppCompatActivity() {
             isFavorite = false
         } else {
             user = User()
-            isFavorite = true
         }
+
+        log.d("MyUser", user.toString())
+        log.d("MyPosition", position.toString())
+        log.d("MyFavorite", isFavorite.toString())
+        log.d("MyUserId", user.id.toString())
 
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
         mainViewModel.setDetail(user.username)
@@ -131,6 +135,7 @@ class DetailActivity : AppCompatActivity() {
 
     private fun insertUser(user: User) {
         val values = ContentValues()
+        values.put(DatabaseContract.FavoriteColumns._ID, user.id)
         values.put(DatabaseContract.FavoriteColumns.USERNAME, user.username)
         values.put(DatabaseContract.FavoriteColumns.AVATAR, user.avatar)
 
@@ -140,7 +145,7 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun deleteUser(user: User) {
-        val result = favoriteHelper.deleteById(user.username)
+        val result = favoriteHelper.deleteById(user.id.toString())
         user.username = result.toString()
         val intent = Intent()
         intent.putExtra(EXTRA_POSITION, position)
