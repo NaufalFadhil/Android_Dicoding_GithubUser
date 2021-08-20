@@ -126,13 +126,14 @@ class UserListActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.action_change_settings -> {
-                val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
-                startActivity(mIntent)
+            R.id.settings -> {
+//                val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
+                val prefIntent = Intent(this, PreferenceActivity::class.java)
+                startActivity(prefIntent)
             }
             R.id.favorite -> {
-                val mIntent = Intent(this, FavoriteActivity::class.java)
-                startActivity(mIntent)
+                val favIntent = Intent(this, FavoriteActivity::class.java)
+                startActivity(favIntent)
             }
             else -> return true
         }

@@ -11,9 +11,8 @@
         android:title="@string/logo_favorite"
         android:icon = "@drawable/ic_baseline_favorite_24"
         app:showAsAction="always" />
-    <group android:menuCategory="container">
-        <item android:id="@+id/action_change_settings"
-            android:title="@string/change_language_settings" />
-    </group>
-
+    <item android:id="@+id/settings"
+        android:title="@string/logo_setting"
+        android:icon = "@drawable/ic_baseline_settings_24"
+        app:showAsAction="always" />
 </menu>

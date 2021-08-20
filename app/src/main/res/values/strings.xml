@@ -20,4 +20,9 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="logo_favorite">favorite logo</string>
+    <string name="change_alarm_settings">Ubah Pengaturan Alarm</string>
+    <string name="alarm_reminder">Reminder at 9.00AM</string>
+    <string name="key_alarm">alarm</string>
+    <string name="logo_setting">Logo Pengaturan</string>
+    <string name="key_languages">languages</string>
 </resources>

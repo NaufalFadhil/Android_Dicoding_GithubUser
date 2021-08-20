@@ -12,6 +12,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.dicoding.githubuser.R
+import com.dicoding.githubuser.adapter.ListUserAdapter
 import com.dicoding.githubuser.adapter.SectionsPagerAdapter
 import com.dicoding.githubuser.databinding.ActivityDetailBinding
 import com.dicoding.githubuser.db.DatabaseContract
@@ -140,6 +141,8 @@ class DetailActivity : AppCompatActivity() {
                 log.d("MyLog", "Gagal Menghapus ke database")
             }
         }
+        val adapter = ListUserAdapter()
+        adapter.notifyDataSetChanged()
     }
 
     private fun insertUser(user: User) {
@@ -156,8 +159,6 @@ class DetailActivity : AppCompatActivity() {
         val intent = Intent()
         intent.putExtra(EXTRA_POSITION, position)
         setResult(RESULT_DELETE, intent)
-        isFavorite = isFavorite
-        changeFavoriteIcon(isFavorite)
     }
 
     private fun tabLayoutAdapter(username: String?) {
@@ -172,9 +173,4 @@ class DetailActivity : AppCompatActivity() {
 
         supportActionBar?.elevation = 0f
     }
-
-    override fun onBackPressed() {
-        showAlertDialog(ALERT_DIALOG_CLOSE)
-    }
-
 }

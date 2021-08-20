@@ -11,5 +11,7 @@
     <string name="search_hint">input username</string>
 
     <string name="change_language_settings">Change Language Settings</string>
+    <string name="reminder">Reminder at 9.00AM</string>
+    <string name="logo_setting">Logo Pengaturan</string>
 
 </resources>

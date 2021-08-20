@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dicoding.githubuser" >
+    package="com.dicoding.githubuser">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GithubUser"
-        android:usesCleartextTraffic="true" >
+        android:usesCleartextTraffic="true">
+        <receiver
+            android:name=".alarm.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
         <activity
             android:name=".activity.FavoriteActivity"
             android:exported="true"
@@ -20,9 +25,10 @@
             android:theme="@style/Theme.GithubUser.NoActionBar" />
         <activity android:name=".activity.DetailActivity" />
         <activity android:name=".activity.UserListActivity" />
+        <activity android:name=".activity.PreferenceActivity" />
         <activity
             android:name=".activity.SplashScreenActivity"
-            android:theme="@style/AppTheme.noActionBar" >
+            android:theme="@style/AppTheme.noActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
