@@ -10,7 +10,7 @@
     <SwitchPreference
         android:key="@string/key_alarm"
         android:title="@string/alarm_reminder"
-        android:icon="@drawable/ic_baseline_alarm_24"/>
+        android:icon="@drawable/ic_baseline_notifications_active_24"/>
 
 
 </PreferenceScreen>

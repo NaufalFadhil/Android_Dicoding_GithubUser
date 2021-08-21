@@ -11,6 +11,6 @@
     <string name="search_hint">名前を入力</string>
 
     <string name="change_language_settings">言語設定の変更</string>
-    <string name="reminder">Reminder at 9.00AM</string>
     <string name="logo_setting">Logo Pengaturan</string>
+    <string name="reminder">Pengingat</string>
 </resources>

@@ -25,4 +25,6 @@
     <string name="key_alarm">alarm</string>
     <string name="logo_setting">Logo Pengaturan</string>
     <string name="key_languages">languages</string>
+    <string name="goBack">Lihat user github yang sedang populer!</string>
+    <string name="reminder">Pengingat</string>
 </resources>

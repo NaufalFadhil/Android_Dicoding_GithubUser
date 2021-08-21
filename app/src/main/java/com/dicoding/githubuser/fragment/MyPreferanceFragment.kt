@@ -1,17 +1,13 @@
 package com.dicoding.githubuser.fragment
 
-import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.provider.Settings
-import android.view.View
-import androidx.preference.CheckBoxPreference
+import android.widget.Toast
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
 import com.dicoding.githubuser.R
-import com.dicoding.githubuser.activity.PreferenceActivity
-import com.dicoding.githubuser.alarm.AlarmReceiver
+import com.dicoding.githubuser.receiver.AlarmReceiver
 import com.loopj.android.http.AsyncHttpClient.log
 
 class MyPreferanceFragment : PreferenceFragmentCompat(),
@@ -57,15 +53,19 @@ class MyPreferanceFragment : PreferenceFragmentCompat(),
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
         log.d("MyKey", key.toString())
-//        if (key == ALARM) {
-//            val alarm = sharedPreferences?.getBoolean(key, true)
-//
-//            if (alarm != null) {
-//                context?.let { alarmReceiver.setRepeatingAlarm(it, getString(R.string.search), getString(R.string.search), "OKeee") }
-//            } else {
-//                context?.let { alarmReceiver.abortBroadcast() }
-//            }
-//        } else if (key == LANGUAGES){
+        if (key == ALARM) {
+            val alarm = sharedPreferences?.getBoolean(key, true)
+            alarmReceiver = AlarmReceiver()
+            log.d("MyAlarm", alarm.toString())
+            if (alarm == true) {
+                log.d("MyContext", alarm.toString())
+                context?.let { alarmReceiver.setRepeatingAlarm(it, getString(R.string.reminder), getString(R.string.goBack)) }
+            } else {
+                log.d("MyContext", alarm.toString())
+                context?.let { alarmReceiver.cancelRepeatingAlarm(it, AlarmReceiver.TYPE_REPEATING) }
+            }
+        }
+//        else if (key == LANGUAGES){
 //            val langIntnt = Intent(Settings.ACTION_LOCALE_SETTINGS)
 //            startActivity(langIntnt)
 //        }

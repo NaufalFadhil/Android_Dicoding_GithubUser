@@ -14,7 +14,7 @@
         android:theme="@style/Theme.GithubUser"
         android:usesCleartextTraffic="true">
         <receiver
-            android:name=".alarm.AlarmReceiver"
+            android:name=".receiver.AlarmReceiver"
             android:enabled="true"
             android:exported="true"></receiver>
 
