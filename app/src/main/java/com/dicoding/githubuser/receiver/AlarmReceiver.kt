@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.dicoding.githubuser.R
+import com.dicoding.githubuser.activity.FavoriteActivity
+import com.dicoding.githubuser.activity.UserListActivity
 import com.dicoding.githubuser.fragment.MyPreferanceFragment
 import com.google.android.material.snackbar.Snackbar
 import com.loopj.android.http.AsyncHttpClient.log
@@ -20,7 +22,7 @@ import java.util.*
 class AlarmReceiver : BroadcastReceiver() {
 
     companion object {
-        const val TYPE_REPEATING = "RepeatingAlarm"
+        const val TYPE_REPEATING = "Popular!"
         const val EXTRA_MESSAGE = "message"
         const val EXTRA_TYPE = "type"
 
@@ -64,16 +66,21 @@ class AlarmReceiver : BroadcastReceiver() {
         val CHANNEL_ID = "Channel_1"
         val CHANNEL_NAME = "AlarmManager channel"
 
+        val intent = Intent(context, UserListActivity::class.java)
+        val pendingIntent = PendingIntent.getActivity(context, 0, intent, 0)
+
         val notificationManagerCompat =
             context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_baseline_home_24)
+            .setSmallIcon(R.drawable.mark_github)
             .setContentTitle(title)
             .setContentText(message)
             .setColor(ContextCompat.getColor(context, android.R.color.transparent))
             .setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
             .setSound(alarmSound)
+            .setContentIntent(pendingIntent)
+            .setAutoCancel(true)
 
         /*
         Untuk android Oreo ke atas perlu menambahkan notification channel
@@ -113,7 +120,7 @@ class AlarmReceiver : BroadcastReceiver() {
 
         val calendar = Calendar.getInstance()
         calendar.set(Calendar.HOUR_OF_DAY, 22)
-        calendar.set(Calendar.MINUTE, 25)
+        calendar.set(Calendar.MINUTE, 54)
         calendar.set(Calendar.SECOND, 0)
 
         val pendingIntent = PendingIntent.getBroadcast(context, ID_REPEATING, intent, 0)
