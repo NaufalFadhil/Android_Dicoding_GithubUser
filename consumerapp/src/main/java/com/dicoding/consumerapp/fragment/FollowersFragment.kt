@@ -1,4 +1,4 @@
-package com.dicoding.githubuser.fragment
+package com.dicoding.consumerapp.fragment
 
 import android.content.Intent
 import android.os.Bundle

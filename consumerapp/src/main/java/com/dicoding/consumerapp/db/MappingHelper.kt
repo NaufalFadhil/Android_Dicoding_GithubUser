@@ -1,4 +1,4 @@
-package com.dicoding.githubuser.db
+package com.dicoding.consumerapp.db
 
 import android.database.Cursor
 import com.dicoding.consumerapp.model.User

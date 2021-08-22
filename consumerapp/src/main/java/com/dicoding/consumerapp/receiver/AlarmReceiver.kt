@@ -1,4 +1,4 @@
-package com.dicoding.githubuser.receiver
+package com.dicoding.consumerapp.receiver
 
 import android.app.*
 import android.content.BroadcastReceiver

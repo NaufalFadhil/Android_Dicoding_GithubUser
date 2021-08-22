@@ -1,4 +1,4 @@
-package com.dicoding.githubuser.activity
+package com.dicoding.consumerapp.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dicoding.consumerapp.R
 import com.dicoding.consumerapp.adapter.ListUserAdapter
 import com.dicoding.consumerapp.databinding.ActivityFavoriteBinding
+import com.dicoding.consumerapp.db.FavoriteHelper
 import com.dicoding.consumerapp.db.MappingHelper
 import com.dicoding.consumerapp.model.User
 import com.google.android.material.snackbar.Snackbar

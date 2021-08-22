@@ -1,4 +1,4 @@
-package com.dicoding.githubuser.activity
+package com.dicoding.consumerapp.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

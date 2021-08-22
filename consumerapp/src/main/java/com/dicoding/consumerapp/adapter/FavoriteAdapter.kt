@@ -1,4 +1,4 @@
-package com.dicoding.githubuser.adapter
+package com.dicoding.consumerapp.adapter
 
 import android.app.Activity
 import android.view.View

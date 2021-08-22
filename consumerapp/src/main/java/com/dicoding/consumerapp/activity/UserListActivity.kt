@@ -1,4 +1,4 @@
-package com.dicoding.githubuser.activity
+package com.dicoding.consumerapp.activity
 
 import android.app.SearchManager
 import android.content.Context
@@ -11,7 +11,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.consumerapp.R
-import com.dicoding.githubuser.model.User
+import com.dicoding.consumerapp.model.User
 import com.dicoding.consumerapp.adapter.ListUserAdapter
 import com.dicoding.consumerapp.databinding.ActivityUserListBinding
 import androidx.appcompat.widget.SearchView
@@ -35,7 +35,7 @@ class UserListActivity : AppCompatActivity() {
         binding = ActivityUserListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = "Consumer App"
+        supportActionBar?.title = "Github Consumer"
 
         adapter = ListUserAdapter()
         adapter.notifyDataSetChanged()

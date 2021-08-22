@@ -3,6 +3,7 @@ package com.dicoding.githubuser.activity
 import android.content.ContentValues
 import android.content.Intent
 import android.database.Cursor
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.annotation.StringRes
@@ -16,7 +17,9 @@ import com.dicoding.githubuser.adapter.ListUserAdapter
 import com.dicoding.githubuser.adapter.SectionsPagerAdapter
 import com.dicoding.githubuser.databinding.ActivityDetailBinding
 import com.dicoding.githubuser.db.DatabaseContract
+import com.dicoding.githubuser.db.DatabaseContract.FavoriteColumns.Companion.CONTENT_URI
 import com.dicoding.githubuser.db.FavoriteHelper
+import com.dicoding.githubuser.db.MappingHelper
 import com.dicoding.githubuser.model.User
 import com.dicoding.githubuser.viewmodel.MainViewModel
 import com.google.android.material.tabs.TabLayout
@@ -28,10 +31,12 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
     private lateinit var mainViewModel: MainViewModel
     private lateinit var favoriteHelper: FavoriteHelper
+    private lateinit var uriWithId: Uri
 
-    private var userModel: User? = null
+    private var user: User? = null
     private var position: Int = 0
     private var isFavorite = false
+    private var isAvail = false
 
     companion object {
         const val EXTRA_USER = "extra_user"
@@ -57,24 +62,34 @@ class DetailActivity : AppCompatActivity() {
         favoriteHelper = FavoriteHelper.getInstance(applicationContext)
         favoriteHelper.open()
 
-        var user = intent.getParcelableExtra<User>(EXTRA_USER) as User
-        position = intent.getIntExtra(EXTRA_POSITION, 0)
-        userModel = User()
+        user = intent.getParcelableExtra(EXTRA_USER)
+//        var user = intent.getParcelableExtra<User>(EXTRA_USER) as User
+//        user = User()
 
-//        if (user != null) {
-//            position = intent.getIntExtra(EXTRA_POSITION, 0)
-//            isFavorite = false
-//        } else {
-//            user = User()
-//        }
+        if (user != null) {
+            position = intent.getIntExtra(EXTRA_POSITION, 0)
+            isAvail = true
+        } else {
+            user = User()
+        }
+
+        if (isAvail) {
+            uriWithId = Uri.parse(DatabaseContract.FavoriteColumns.CONTENT_URI.toString() + "/" + user?.id)
+            val cursor = contentResolver.query(uriWithId, null, null, null, null)
+
+            if (cursor != null && cursor.moveToFirst()) {
+                user = MappingHelper.mapCursorToObject(cursor)
+                cursor.close()
+            }
+        }
 
         log.d("MyUser", user.toString())
         log.d("MyPosition", position.toString())
         log.d("MyFavorite", isFavorite.toString())
-        log.d("MyUserId", user.id.toString())
+        log.d("MyUserId", user?.id.toString())
 
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
-        mainViewModel.setDetail(user.username)
+        mainViewModel.setDetail(user?.username)
         mainViewModel.getDetail().observe(this, { detailUserItem ->
             if (detailUserItem != null) {
                 with(binding) {
@@ -95,14 +110,14 @@ class DetailActivity : AppCompatActivity() {
             }
         })
 
-        tabLayoutAdapter(user.username)
+        tabLayoutAdapter(user?.username)
 
         // Love button clicked
-        cekFavorite(user)
+        cekFavorite(user!!)
         binding.btnFavorite.setOnClickListener {
             isFavorite = !isFavorite
             changeFavoriteIcon(isFavorite)
-            setFavoriteList(isFavorite, user)
+            setFavoriteList(isFavorite, user!!)
         }
     }
 
@@ -150,15 +165,19 @@ class DetailActivity : AppCompatActivity() {
         values.put(DatabaseContract.FavoriteColumns._ID, user.id)
         values.put(DatabaseContract.FavoriteColumns.USERNAME, user.username)
         values.put(DatabaseContract.FavoriteColumns.AVATAR, user.avatar)
-        favoriteHelper.insert(values)
+//        favoriteHelper.insert(values)
+        contentResolver.insert(CONTENT_URI, values)
         setResult(RESULT_ADD, intent)
     }
 
     private fun deleteUser(user: User) {
-        favoriteHelper.deleteById(user.id.toString())
+//        favoriteHelper.deleteById(user.id.toString())
+//        val values = user.id.toString()
+        contentResolver.delete(uriWithId, null, null)
         val intent = Intent()
         intent.putExtra(EXTRA_POSITION, position)
         setResult(RESULT_DELETE, intent)
+
     }
 
     private fun tabLayoutAdapter(username: String?) {

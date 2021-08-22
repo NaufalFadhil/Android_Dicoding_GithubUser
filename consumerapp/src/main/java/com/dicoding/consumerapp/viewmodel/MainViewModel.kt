@@ -1,4 +1,4 @@
-package com.dicoding.githubuser.viewmodel
+package com.dicoding.consumerapp.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.LiveData

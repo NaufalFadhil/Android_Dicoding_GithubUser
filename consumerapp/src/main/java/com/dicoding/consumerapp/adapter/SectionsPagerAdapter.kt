@@ -1,4 +1,4 @@
-package com.dicoding.githubuser.adapter
+package com.dicoding.consumerapp.adapter
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment

@@ -67,6 +67,7 @@ class UserProvider : ContentProvider() {
     ): Cursor? {
         return when (sUriMatcher.match(uri)) {
             USER -> favoriteHelper.queryAll()
+            USER_ID -> favoriteHelper.queryById(uri.lastPathSegment.toString())
             else -> null
         }
     }
