@@ -1,7 +1,9 @@
 package com.dicoding.githubuser.fragment
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.provider.Settings
 import android.widget.Toast
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -65,9 +67,9 @@ class MyPreferanceFragment : PreferenceFragmentCompat(),
                 context?.let { alarmReceiver.cancelRepeatingAlarm(it, AlarmReceiver.TYPE_REPEATING) }
             }
         }
-//        else if (key == LANGUAGES){
-//            val langIntnt = Intent(Settings.ACTION_LOCALE_SETTINGS)
-//            startActivity(langIntnt)
-//        }
+        else if (key == LANGUAGES){
+            val langIntnt = Intent(Settings.ACTION_LOCALE_SETTINGS)
+            startActivity(langIntnt)
+        }
     }
 }

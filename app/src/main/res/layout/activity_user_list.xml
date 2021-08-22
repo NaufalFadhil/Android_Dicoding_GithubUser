@@ -20,8 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user_not_found"
-        android:contentDescription="@string/dummy_string" />
+        app:srcCompat="@drawable/user_not_found" />
 
     <ProgressBar
         android:id="@+id/progressBar"

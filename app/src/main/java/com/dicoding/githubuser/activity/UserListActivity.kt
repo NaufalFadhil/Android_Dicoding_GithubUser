@@ -126,10 +126,6 @@ class UserListActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.language -> {
-                val langIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
-                startActivity(langIntent)
-            }
             R.id.settings -> {
                 val prefIntent = Intent(this, PreferenceActivity::class.java)
                 startActivity(prefIntent)
