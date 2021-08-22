@@ -13,7 +13,6 @@ import com.dicoding.githubuser.R
 import com.dicoding.githubuser.adapter.ListUserAdapter
 import com.dicoding.githubuser.databinding.ActivityFavoriteBinding
 import com.dicoding.githubuser.db.DatabaseContract.FavoriteColumns.Companion.CONTENT_URI
-import com.dicoding.githubuser.db.FavoriteHelper
 import com.dicoding.githubuser.db.MappingHelper
 import com.dicoding.githubuser.model.User
 import com.google.android.material.snackbar.Snackbar

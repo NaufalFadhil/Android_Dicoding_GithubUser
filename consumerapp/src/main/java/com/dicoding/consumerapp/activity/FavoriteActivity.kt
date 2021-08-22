@@ -1,15 +1,19 @@
 package com.dicoding.consumerapp.activity
 
 import android.content.Intent
+import android.database.ContentObserver
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.HandlerThread
 import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.consumerapp.R
+import com.dicoding.consumerapp.activity.DetailActivity
 import com.dicoding.consumerapp.adapter.ListUserAdapter
 import com.dicoding.consumerapp.databinding.ActivityFavoriteBinding
-import com.dicoding.consumerapp.db.FavoriteHelper
+import com.dicoding.consumerapp.db.DatabaseContract.FavoriteColumns.Companion.CONTENT_URI
 import com.dicoding.consumerapp.db.MappingHelper
 import com.dicoding.consumerapp.model.User
 import com.google.android.material.snackbar.Snackbar
@@ -41,6 +45,18 @@ class FavoriteActivity : AppCompatActivity() {
         showSearchNotFound(true)
         showLoading(false)
         showRecyclerList()
+
+        val handlerThread = HandlerThread("DataObserver")
+        handlerThread.start()
+        val handler = Handler(handlerThread.looper)
+
+        val myObserver = object : ContentObserver(handler) {
+            override fun onChange(self: Boolean) {
+                loadUsersAsync()
+            }
+        }
+
+        contentResolver.registerContentObserver(CONTENT_URI, true, myObserver)
 
         if (savedInstanceState == null) {
             // Proses pengambilan data
@@ -79,11 +95,12 @@ class FavoriteActivity : AppCompatActivity() {
     private fun loadUsersAsync() {
         GlobalScope.launch(Dispatchers.Main) {
             showLoading(true)
-            val userHelper = FavoriteHelper.getInstance(applicationContext)
+//            val userHelper = FavoriteHelper.getInstance(applicationContext)
             // ATURAN UTAMA: Membuat instance dan membuka koneksi pada metode onCreate()
-            userHelper.open()
+//            userHelper.open()
             val deferredUsers = async(Dispatchers.IO) {
-                val cursor = userHelper.queryAll()
+//                val cursor = userHelper.queryAll()
+                val cursor = contentResolver.query(CONTENT_URI, null, null, null, null)
                 MappingHelper.mapCursorToArrayList(cursor)
             }
             showLoading(false)
@@ -98,7 +115,7 @@ class FavoriteActivity : AppCompatActivity() {
                 adapter.notifyDataSetChanged()
                 showSnackbarMessage("Tidak ada data saat ini")
             }
-            userHelper.close()
+//            userHelper.close()
             Log.d("myLog: ", favoriteUser.toString())
         }
     }

@@ -30,7 +30,6 @@ class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
     private lateinit var mainViewModel: MainViewModel
-    private lateinit var favoriteHelper: FavoriteHelper
     private lateinit var uriWithId: Uri
 
     private var user: User? = null
@@ -58,9 +57,6 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        favoriteHelper = FavoriteHelper.getInstance(applicationContext)
-        favoriteHelper.open()
 
         user = intent.getParcelableExtra(EXTRA_USER)
 //        var user = intent.getParcelableExtra<User>(EXTRA_USER) as User
@@ -122,8 +118,11 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun cekFavorite(user: User){
-        val cursor: Cursor = favoriteHelper.queryById(user.id.toString())
-        if (cursor.moveToNext()) {
+//        val cursor: Cursor = favoriteHelper.queryById(user.id.toString())
+        uriWithId = Uri.parse(CONTENT_URI.toString() + "/" + user?.id)
+        val cursor = contentResolver.query(uriWithId, null, null, null, null)
+        log.d("MyURI", uriWithId.toString())
+        if (cursor != null && cursor.moveToNext()) {
             isFavorite = true
             changeFavoriteIcon(isFavorite)
         }
@@ -143,7 +142,7 @@ class DetailActivity : AppCompatActivity() {
                 log.d("MyLog", "Mau insert nih")
                 insertUser(user)
                 changeFavoriteIcon(isFavorite)
-                log.d("MyLog", "Behasil inser")
+                log.d("MyLog", "Behasil insert")
             } catch (e: Exception) {
                 log.d("MyLog", "Gagal Memasukkan ke database")
             }

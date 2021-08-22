@@ -16,6 +16,7 @@ import com.dicoding.consumerapp.adapter.ListUserAdapter
 import com.dicoding.consumerapp.databinding.ActivityUserListBinding
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
+import com.dicoding.consumerapp.activity.FavoriteActivity
 import com.dicoding.consumerapp.viewmodel.MainViewModel
 
 class UserListActivity : AppCompatActivity() {
