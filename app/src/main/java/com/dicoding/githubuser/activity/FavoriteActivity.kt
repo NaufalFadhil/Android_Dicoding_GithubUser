@@ -33,6 +33,8 @@ class FavoriteActivity : AppCompatActivity() {
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.title = "User's Favorite"
+
         adapter = ListUserAdapter()
         adapter.notifyDataSetChanged()
 
