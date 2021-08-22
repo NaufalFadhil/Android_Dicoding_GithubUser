@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Github User</string>
+    <string name="dummy_string">lorem ipsum</string>
+    <string name="dummy_number">00</string>
+    <string name="followers">PENGIKUT</string>
+    <string name="following">MENGIKUTI</string>
+    <string name="repository">REPO</string>
+    <string name="logo_github">Logo Github</string>
+    <string name="search">mencari</string>
+    <string name="search_hint">Masukkan nama pengguna</string>
+    <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
+    <string name="button_favorite">Favorite Button</string>
+    <string name="title_activity_favorite">FavoriteActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="logo_favorite">favorite logo</string>
+    <string name="change_alarm_settings">Ubah Pengaturan Alarm</string>
+    <string name="alarm_reminder">Reminder at 9.00AM</string>
+    <string name="key_alarm">alarm</string>
+    <string name="logo_setting">Logo Pengaturan</string>
+    <string name="key_languages">languages</string>
+    <string name="goBack">Lihat user github yang sedang populer!</string>
+    <string name="reminder">Pengingat</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Github User</string>
+    <string name="dummy_string">lorem ipsum</string>
+    <string name="dummy_number">00</string>
+    <string name="followers">FOLLOWERS</string>
+    <string name="following">FOLLOWING</string>
+    <string name="repository">REPO</string>
+    <string name="logo_github">Github Logo</string>
+    <string name="search">search</string>
+    <string name="search_hint">input username</string>
+
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="logo_setting">Logo Pengaturan</string>
+    <string name="reminder">Pengingat</string>
+
+</resources>
