@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
+            "map": [
+                {
+                    "source": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\src\\main\\res\\values-en\\strings.xml",
+                    "from": {
+                        "startLines": "2,12,4,3,5,6,8,13,14,7,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "109,555,213,159,258,307,401,634,692,356,454,497",
+                        "endColumns": "48,77,43,52,47,47,51,56,46,43,41,54",
+                        "endOffsets": "153,628,252,207,301,350,448,686,734,395,491,547"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,104,182,226,279,327,375,427,484,531,575,617",
+                        "endColumns": "48,77,43,52,47,47,51,56,46,43,41,54",
+                        "endOffsets": "99,177,221,274,322,370,422,479,526,570,612,667"
+                    }
+                }
+            ]
+        }
+    ]
+}

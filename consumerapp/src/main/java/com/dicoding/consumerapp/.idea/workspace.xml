@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c9f7195f-47fe-4fc4-86f6-36be3310195d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../../../../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../app/src/main/java/com/dicoding/githubuser/activity/DetailActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../app/src/main/java/com/dicoding/githubuser/activity/DetailActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../app/src/main/java/com/dicoding/githubuser/activity/FavoriteActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../app/src/main/java/com/dicoding/githubuser/activity/FavoriteActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../app/src/main/java/com/dicoding/githubuser/adapter/FavoriteAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../app/src/main/java/com/dicoding/githubuser/db/MappingHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../app/src/main/java/com/dicoding/githubuser/db/MappingHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../app/src/main/java/com/dicoding/githubuser/provider/UserProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../app/src/main/java/com/dicoding/githubuser/provider/UserProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity/DetailActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/activity/DetailActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity/FavoriteActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/activity/FavoriteActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity/FirstFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/activity/FirstFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity/PreferenceActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/activity/PreferenceActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity/SecondFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/activity/SecondFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity/SplashScreenActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/activity/SplashScreenActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity/UserListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/activity/UserListActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapter/FavoriteAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/FavoriteAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapter/ListUserAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/ListUserAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapter/SectionsPagerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/SectionsPagerAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/DatabaseContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/db/DatabaseContract.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/MappingHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/db/MappingHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment/AlarmFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/fragment/AlarmFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment/FollowersFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/fragment/FollowersFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment/FollowingFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/fragment/FollowingFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment/MyPreferanceFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/fragment/MyPreferanceFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/model/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/UserProvider.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/receiver/AlarmReceiver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/receiver/AlarmReceiver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viewmodel/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/viewmodel/MainViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../gradle.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../../.." />
+  </component>
+  <component name="ProjectId" id="1x59orgS5elxg5AYNzJTGecX5HC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../../../clone/github-user-2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9f7195f-47fe-4fc4-86f6-36be3310195d" name="Default Changelist" comment="" />
+      <created>1629634260330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629634260330</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

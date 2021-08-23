@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_followers.xml",
+        "source": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\src\\main\\res\\layout\\fragment_followers.xml"
+    },
+    {
+        "merged": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_preference.xml",
+        "source": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\src\\main\\res\\layout\\activity_preference.xml"
+    },
+    {
+        "merged": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_first.xml",
+        "source": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\src\\main\\res\\layout\\fragment_first.xml"
+    },
+    {
+        "merged": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_following.xml",
+        "source": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\src\\main\\res\\layout\\fragment_following.xml"
+    },
+    {
+        "merged": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail.xml",
+        "source": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\src\\main\\res\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash_screen.xml",
+        "source": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\src\\main\\res\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_user_list.xml",
+        "source": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\src\\main\\res\\layout\\activity_user_list.xml"
+    },
+    {
+        "merged": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_second.xml",
+        "source": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\src\\main\\res\\layout\\fragment_second.xml"
+    },
+    {
+        "merged": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_row_user.xml",
+        "source": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\src\\main\\res\\layout\\item_row_user.xml"
+    },
+    {
+        "merged": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_favorite.xml",
+        "source": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\src\\main\\res\\layout\\activity_favorite.xml"
+    },
+    {
+        "merged": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_favorite.xml",
+        "source": "D:\\Dev\\Dicoding\\AndroidPath\\BFAA\\GithubUser\\consumerapp\\src\\main\\res\\layout\\content_favorite.xml"
+    }
+]

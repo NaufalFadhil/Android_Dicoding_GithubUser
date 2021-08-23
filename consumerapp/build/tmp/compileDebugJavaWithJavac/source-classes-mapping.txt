@@ -1,0 +1,18 @@
+com/dicoding/consumerapp/BuildConfig.java
+ com.dicoding.consumerapp.BuildConfig
+com/dicoding/consumerapp/databinding/ActivityDetailBinding.java
+ com.dicoding.consumerapp.databinding.ActivityDetailBinding
+com/dicoding/consumerapp/databinding/ActivityPreferenceBinding.java
+ com.dicoding.consumerapp.databinding.ActivityPreferenceBinding
+com/dicoding/consumerapp/databinding/ActivityFavoriteBinding.java
+ com.dicoding.consumerapp.databinding.ActivityFavoriteBinding
+com/dicoding/consumerapp/databinding/ActivitySplashScreenBinding.java
+ com.dicoding.consumerapp.databinding.ActivitySplashScreenBinding
+com/dicoding/consumerapp/databinding/FragmentFollowersBinding.java
+ com.dicoding.consumerapp.databinding.FragmentFollowersBinding
+com/dicoding/consumerapp/databinding/ItemRowUserBinding.java
+ com.dicoding.consumerapp.databinding.ItemRowUserBinding
+com/dicoding/consumerapp/databinding/ActivityUserListBinding.java
+ com.dicoding.consumerapp.databinding.ActivityUserListBinding
+com/dicoding/consumerapp/databinding/FragmentFollowingBinding.java
+ com.dicoding.consumerapp.databinding.FragmentFollowingBinding

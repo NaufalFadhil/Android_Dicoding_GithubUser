@@ -1,0 +1,353 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:2:1-47:12
+MERGED from [androidx.databinding:viewbinding:4.0.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\a97ecb0f562be674ef803dd516970363\viewbinding-4.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\8abbba9985e7a883637428261884455a\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\02d6e069ddad8dd083094a87f04d2040\fragment-ktx-1.2.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\5848b329faf3cbef8298f069504847a9\navigation-ui-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0ad7a10faef113e9985e7cfd1c53c2c9\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\6a946f5617c4cb85dabc0163b1047810\navigation-common-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\faf42b2dcb180cff3d7d3664a4cfe342\activity-ktx-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\7bf3f9331ce0369cda0a115500b9abc9\core-ktx-1.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\4f0a0d66d45d4fba399f4344571aa8b2\lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\062b51f527b83fcda7e113e750be63ad\lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\519f68783260bbcfc2c8e49d1f9f8b06\lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\6f0e07aa0dc652c8fbc69c0db64627dd\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\000fd2daa2a4a53a71b00f3db82bc2c0\material-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\ee9764c39aa916b859648121fb7984f2\constraintlayout-2.1.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\1e960f30e539b34daaa712afbef0ba11\preference-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0f3557d5d7dc6a6836fa6ded790339d4\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\4d9cd418ed046aa065f6f764b67fe6bb\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\bfd3db7f71fd822d255b9716d04fb3ef\circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0b52540cea6b4b63ae4f9469d1649403\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\493c0f8ac28121dc1571a815f85c0359\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\ad733384bc36b86bd8616654d4b0cc22\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\9e6e166fb8502b22f4995760b5b9df5e\glide-4.12.0\AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f81c0622b004fc57ece392bb980a41fd\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\031a5274d1d0bd11bfb9b1c2859489c3\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\de8830221c1da56b33ad5f6d2246a1c9\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\445a72b1fb9ecf8a089d778e6855994a\navigation-runtime-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.4] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\4409f1cf944e7d951782c4c95f1179c6\activity-1.2.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\8131a64fc3a99be7427a46ad9f316a2a\appcompat-resources-1.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\b45d0aa3fd7389c44c3bf8c1a3a4c383\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\d78ecfa278e7e93cfb98aecd85fd7b1e\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\df9e6f62ffd4d7e9013dba14290becfc\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\1bacd39d965ad7d0c22c839b3224f0f4\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\3db65fb8b34f22d900f94984481ee5da\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\ab2082eee30a4a4d79f7933aec5c0696\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\762eb4bc22103796575acf194df7794e\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\9ce7a4e9040efe05c86347c289fbcd79\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\deb4519b13c7d704bb45f73644f663d5\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\3d3c3bd671c7c560ae38a7e605d00018\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\b7bbfb5ac4e94b9ca8c1d8c6695ec4cd\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\5dd27994fcd9c8b2d7722d5179723c2e\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\985d5ddad240acfe028145e29f83320b\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\6b523625471c053e213e6c008f3c50fe\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\adf261e80e0f46abfe34aaa42b9c2e9f\transition-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\1843e3fb2ee5eed886bb622544ae5ab8\navigation-common-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.6.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0a3b70ba1d2a1cdf8c30636eda3a1e4a\core-1.6.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f01cfa1acfdf69322d09c9e00060534a\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\b3bcb63733687766116e89f24b03489c\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\dcc8cbc9113389a116275104ea55addd\savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f98ef1fcbc0eac7ab748eafbdf11a78f\lifecycle-process-2.2.0\AndroidManifest.xml:17:1-32:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\e8307c320e9154343d6ea382f46f7522\lifecycle-service-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\b1ed254e9a9dda5b0c05bcf29cf79aa2\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\30750d63b89261662173e5be8a5c9a35\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\838fb165eca517e090dbedb50bc4b8d0\gifdecoder-4.12.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\6e93fd4fbbacd4d31048fe9f771895d5\exifinterface-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\9c8021aeff64d66de037d67d68a14580\lifecycle-livedata-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\c779373c75c673ca7d33bf27e4301d13\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\e745c9a90db39440164a436ec8e59808\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\42098ba23e3ea85b37f6f2cb891bdb06\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\4cb2278cd17315e9ee83ba1e22bf6165\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\88acb6ca5b2d36c9da36c33be96a6438\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\fd43644ff4428c4e792c98962af234c1\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\09df2e6ed1342db063ca7184a54e3ae7\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\eafd280627cb115b5d73b9bc2a990590\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\3dd7dff7fb4b46780e6f4d2b68ac9972\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:2:1-47:12
+	package
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:3:5-39
+		INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+		INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:2:1-47:12
+		INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:2:1-47:12
+		INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:5:22-64
+uses-permission#com.dicoding.githubuser.READ_DATABASE
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:6:5-77
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:6:22-74
+uses-permission#com.dicoding.githubuser.WRITE_DATABASE
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:7:5-78
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:7:22-75
+permission#com.dicoding.consumerapp.READ_DATABASE
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:8:5-105
+	android:protectionLevel
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:8:71-103
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:8:17-70
+permission#com.dicoding.consumerapp.WRITE_DATABASE
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:9:5-106
+	android:protectionLevel
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:9:72-104
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:9:17-71
+application
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:11:5-42:19
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\000fd2daa2a4a53a71b00f3db82bc2c0\material-1.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\000fd2daa2a4a53a71b00f3db82bc2c0\material-1.4.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\ee9764c39aa916b859648121fb7984f2\constraintlayout-2.1.0\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\ee9764c39aa916b859648121fb7984f2\constraintlayout-2.1.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\bfd3db7f71fd822d255b9716d04fb3ef\circleimageview-3.1.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\bfd3db7f71fd822d255b9716d04fb3ef\circleimageview-3.1.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\9e6e166fb8502b22f4995760b5b9df5e\glide-4.12.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\9e6e166fb8502b22f4995760b5b9df5e\glide-4.12.0\AndroidManifest.xml:10:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f81c0622b004fc57ece392bb980a41fd\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f81c0622b004fc57ece392bb980a41fd\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.core:core:1.6.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0a3b70ba1d2a1cdf8c30636eda3a1e4a\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.6.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0a3b70ba1d2a1cdf8c30636eda3a1e4a\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f98ef1fcbc0eac7ab748eafbdf11a78f\lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f98ef1fcbc0eac7ab748eafbdf11a78f\lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\838fb165eca517e090dbedb50bc4b8d0\gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\838fb165eca517e090dbedb50bc4b8d0\gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\42098ba23e3ea85b37f6f2cb891bdb06\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\42098ba23e3ea85b37f6f2cb891bdb06\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.6.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0a3b70ba1d2a1cdf8c30636eda3a1e4a\core-1.6.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:17:9-35
+	android:label
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:15:9-41
+	android:fullBackupContent
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:13:9-59
+	android:roundIcon
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:16:9-54
+	android:icon
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:14:9-43
+	android:allowBackup
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:12:9-35
+	android:theme
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:18:9-48
+	android:usesCleartextTraffic
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:19:9-44
+receiver#com.dicoding.consumerapp.receiver.AlarmReceiver
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:20:9-23:39
+	android:enabled
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:22:13-35
+	android:exported
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:23:13-36
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:21:13-51
+activity#com.dicoding.consumerapp.activity.FavoriteActivity
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:25:9-29:67
+	android:label
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:28:13-60
+	android:exported
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:27:13-36
+	android:theme
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:29:13-64
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:26:13-54
+activity#com.dicoding.consumerapp.activity.DetailActivity
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:30:9-61
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:30:19-58
+activity#com.dicoding.consumerapp.activity.UserListActivity
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:31:9-63
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:31:19-60
+activity#com.dicoding.consumerapp.activity.PreferenceActivity
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:32:9-65
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:32:19-62
+activity#com.dicoding.consumerapp.activity.SplashScreenActivity
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:33:9-41:20
+	android:theme
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:35:13-56
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:34:13-58
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:36:13-40:29
+action#android.intent.action.MAIN
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:37:17-69
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:37:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:39:17-77
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:39:27-74
+queries
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:44:5-46:15
+package#com.dicoding.githubuser
+ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:45:9-59
+	android:name
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml:45:18-56
+uses-sdk
+INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:4.0.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\a97ecb0f562be674ef803dd516970363\viewbinding-4.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:4.0.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\a97ecb0f562be674ef803dd516970363\viewbinding-4.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\8abbba9985e7a883637428261884455a\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\8abbba9985e7a883637428261884455a\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\02d6e069ddad8dd083094a87f04d2040\fragment-ktx-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\02d6e069ddad8dd083094a87f04d2040\fragment-ktx-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\5848b329faf3cbef8298f069504847a9\navigation-ui-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\5848b329faf3cbef8298f069504847a9\navigation-ui-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0ad7a10faef113e9985e7cfd1c53c2c9\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0ad7a10faef113e9985e7cfd1c53c2c9\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\6a946f5617c4cb85dabc0163b1047810\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\6a946f5617c4cb85dabc0163b1047810\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\faf42b2dcb180cff3d7d3664a4cfe342\activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\faf42b2dcb180cff3d7d3664a4cfe342\activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\7bf3f9331ce0369cda0a115500b9abc9\core-ktx-1.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\7bf3f9331ce0369cda0a115500b9abc9\core-ktx-1.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\4f0a0d66d45d4fba399f4344571aa8b2\lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\4f0a0d66d45d4fba399f4344571aa8b2\lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\062b51f527b83fcda7e113e750be63ad\lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\062b51f527b83fcda7e113e750be63ad\lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\519f68783260bbcfc2c8e49d1f9f8b06\lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\519f68783260bbcfc2c8e49d1f9f8b06\lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\6f0e07aa0dc652c8fbc69c0db64627dd\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\6f0e07aa0dc652c8fbc69c0db64627dd\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\000fd2daa2a4a53a71b00f3db82bc2c0\material-1.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\000fd2daa2a4a53a71b00f3db82bc2c0\material-1.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\ee9764c39aa916b859648121fb7984f2\constraintlayout-2.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\ee9764c39aa916b859648121fb7984f2\constraintlayout-2.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\1e960f30e539b34daaa712afbef0ba11\preference-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\1e960f30e539b34daaa712afbef0ba11\preference-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0f3557d5d7dc6a6836fa6ded790339d4\appcompat-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0f3557d5d7dc6a6836fa6ded790339d4\appcompat-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\4d9cd418ed046aa065f6f764b67fe6bb\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\4d9cd418ed046aa065f6f764b67fe6bb\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\bfd3db7f71fd822d255b9716d04fb3ef\circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\bfd3db7f71fd822d255b9716d04fb3ef\circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0b52540cea6b4b63ae4f9469d1649403\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0b52540cea6b4b63ae4f9469d1649403\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\493c0f8ac28121dc1571a815f85c0359\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\493c0f8ac28121dc1571a815f85c0359\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\ad733384bc36b86bd8616654d4b0cc22\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\ad733384bc36b86bd8616654d4b0cc22\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\9e6e166fb8502b22f4995760b5b9df5e\glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\9e6e166fb8502b22f4995760b5b9df5e\glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f81c0622b004fc57ece392bb980a41fd\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f81c0622b004fc57ece392bb980a41fd\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\031a5274d1d0bd11bfb9b1c2859489c3\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\031a5274d1d0bd11bfb9b1c2859489c3\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\de8830221c1da56b33ad5f6d2246a1c9\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\de8830221c1da56b33ad5f6d2246a1c9\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\445a72b1fb9ecf8a089d778e6855994a\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\445a72b1fb9ecf8a089d778e6855994a\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.4] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\4409f1cf944e7d951782c4c95f1179c6\activity-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.4] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\4409f1cf944e7d951782c4c95f1179c6\activity-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\8131a64fc3a99be7427a46ad9f316a2a\appcompat-resources-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\8131a64fc3a99be7427a46ad9f316a2a\appcompat-resources-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\b45d0aa3fd7389c44c3bf8c1a3a4c383\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\b45d0aa3fd7389c44c3bf8c1a3a4c383\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\d78ecfa278e7e93cfb98aecd85fd7b1e\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\d78ecfa278e7e93cfb98aecd85fd7b1e\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\df9e6f62ffd4d7e9013dba14290becfc\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\df9e6f62ffd4d7e9013dba14290becfc\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\1bacd39d965ad7d0c22c839b3224f0f4\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\1bacd39d965ad7d0c22c839b3224f0f4\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\3db65fb8b34f22d900f94984481ee5da\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\3db65fb8b34f22d900f94984481ee5da\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\ab2082eee30a4a4d79f7933aec5c0696\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\ab2082eee30a4a4d79f7933aec5c0696\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\762eb4bc22103796575acf194df7794e\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\762eb4bc22103796575acf194df7794e\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\9ce7a4e9040efe05c86347c289fbcd79\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\9ce7a4e9040efe05c86347c289fbcd79\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\deb4519b13c7d704bb45f73644f663d5\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\deb4519b13c7d704bb45f73644f663d5\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\3d3c3bd671c7c560ae38a7e605d00018\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\3d3c3bd671c7c560ae38a7e605d00018\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\b7bbfb5ac4e94b9ca8c1d8c6695ec4cd\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\b7bbfb5ac4e94b9ca8c1d8c6695ec4cd\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\5dd27994fcd9c8b2d7722d5179723c2e\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\5dd27994fcd9c8b2d7722d5179723c2e\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\985d5ddad240acfe028145e29f83320b\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\985d5ddad240acfe028145e29f83320b\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\6b523625471c053e213e6c008f3c50fe\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\6b523625471c053e213e6c008f3c50fe\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\adf261e80e0f46abfe34aaa42b9c2e9f\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\adf261e80e0f46abfe34aaa42b9c2e9f\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\1843e3fb2ee5eed886bb622544ae5ab8\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\1843e3fb2ee5eed886bb622544ae5ab8\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0a3b70ba1d2a1cdf8c30636eda3a1e4a\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\0a3b70ba1d2a1cdf8c30636eda3a1e4a\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f01cfa1acfdf69322d09c9e00060534a\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f01cfa1acfdf69322d09c9e00060534a\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\b3bcb63733687766116e89f24b03489c\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\b3bcb63733687766116e89f24b03489c\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\dcc8cbc9113389a116275104ea55addd\savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\dcc8cbc9113389a116275104ea55addd\savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f98ef1fcbc0eac7ab748eafbdf11a78f\lifecycle-process-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f98ef1fcbc0eac7ab748eafbdf11a78f\lifecycle-process-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\e8307c320e9154343d6ea382f46f7522\lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\e8307c320e9154343d6ea382f46f7522\lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\b1ed254e9a9dda5b0c05bcf29cf79aa2\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\b1ed254e9a9dda5b0c05bcf29cf79aa2\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\30750d63b89261662173e5be8a5c9a35\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\30750d63b89261662173e5be8a5c9a35\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\838fb165eca517e090dbedb50bc4b8d0\gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\838fb165eca517e090dbedb50bc4b8d0\gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\6e93fd4fbbacd4d31048fe9f771895d5\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\6e93fd4fbbacd4d31048fe9f771895d5\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\9c8021aeff64d66de037d67d68a14580\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\9c8021aeff64d66de037d67d68a14580\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\c779373c75c673ca7d33bf27e4301d13\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\c779373c75c673ca7d33bf27e4301d13\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\e745c9a90db39440164a436ec8e59808\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\e745c9a90db39440164a436ec8e59808\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\42098ba23e3ea85b37f6f2cb891bdb06\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\42098ba23e3ea85b37f6f2cb891bdb06\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\4cb2278cd17315e9ee83ba1e22bf6165\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\4cb2278cd17315e9ee83ba1e22bf6165\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\88acb6ca5b2d36c9da36c33be96a6438\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\88acb6ca5b2d36c9da36c33be96a6438\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\fd43644ff4428c4e792c98962af234c1\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\fd43644ff4428c4e792c98962af234c1\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\09df2e6ed1342db063ca7184a54e3ae7\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\09df2e6ed1342db063ca7184a54e3ae7\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\eafd280627cb115b5d73b9bc2a990590\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\eafd280627cb115b5d73b9bc2a990590\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\3dd7dff7fb4b46780e6f4d2b68ac9972\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\3dd7dff7fb4b46780e6f4d2b68ac9972\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+		INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+		ADDED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+		INJECTED from D:\Dev\Dicoding\AndroidPath\BFAA\GithubUser\consumerapp\src\main\AndroidManifest.xml
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f98ef1fcbc0eac7ab748eafbdf11a78f\lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f98ef1fcbc0eac7ab748eafbdf11a78f\lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f98ef1fcbc0eac7ab748eafbdf11a78f\lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f98ef1fcbc0eac7ab748eafbdf11a78f\lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\naufa\.gradle\caches\transforms-2\files-2.1\f98ef1fcbc0eac7ab748eafbdf11a78f\lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
