@@ -21,7 +21,6 @@ import com.dicoding.githubuser.model.User
 import com.dicoding.githubuser.viewmodel.MainViewModel
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.loopj.android.http.AsyncHttpClient.log
 
 class DetailActivity : AppCompatActivity() {
 
@@ -36,11 +35,8 @@ class DetailActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_USER = "extra_user"
-        const val EXTRA_FAVORITE = "extra_favorite"
         const val EXTRA_POSITION = "extra_position"
-        const val REQUEST_ADD = 100
         const val RESULT_ADD = 101
-        const val REQUEST_DELETE = 200
         const val RESULT_DELETE = 201
 
         @StringRes
@@ -74,11 +70,6 @@ class DetailActivity : AppCompatActivity() {
             }
         }
 
-        log.d("MyUser", user.toString())
-        log.d("MyPosition", position.toString())
-        log.d("MyFavorite", isFavorite.toString())
-        log.d("MyUserId", user?.id.toString())
-
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
         mainViewModel.setDetail(user?.username)
         mainViewModel.getDetail().observe(this, { detailUserItem ->
@@ -88,7 +79,6 @@ class DetailActivity : AppCompatActivity() {
                         .load(detailUserItem.avatar)
                         .apply(RequestOptions().override(90, 90))
                         .into(imgAvatar)
-                    log.d("apa yaa", detailUserItem.toString())
                     tvName.text = detailUserItem.name
                     tvUsername.text = detailUserItem.username
                     tvLocation.text = detailUserItem.location
@@ -115,7 +105,6 @@ class DetailActivity : AppCompatActivity() {
     private fun cekFavorite(user: User){
         uriWithId = Uri.parse(CONTENT_URI.toString() + "/" + user.id)
         val cursor = contentResolver.query(uriWithId, null, null, null, null)
-        log.d("MyURI", uriWithId.toString())
         if (cursor != null && cursor.moveToNext()) {
             isFavorite = true
             changeFavoriteIcon(isFavorite)

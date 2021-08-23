@@ -32,21 +32,6 @@ class ListUserAdapter : RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
             notifyDataSetChanged()
         }
 
-    fun addItem(favorite: User) {
-        this.listFavorite.add(favorite)
-        notifyItemInserted(this.listFavorite.size - 1)
-    }
-    fun updateItem(position: Int, favorite: User) {
-        this.listFavorite[position] = favorite
-        notifyItemChanged(position, favorite)
-    }
-    fun removeItem(position: Int) {
-        this.listFavorite.removeAt(position)
-        notifyItemRemoved(position)
-        notifyItemRangeChanged(position, this.listFavorite.size)
-    }
-
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int

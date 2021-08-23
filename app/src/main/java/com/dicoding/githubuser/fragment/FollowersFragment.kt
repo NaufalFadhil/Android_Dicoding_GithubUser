@@ -50,7 +50,6 @@ class FollowersFragment : Fragment() {
         adapter = ListUserAdapter()
         adapter.notifyDataSetChanged()
 
-
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
             MainViewModel::class.java)
 

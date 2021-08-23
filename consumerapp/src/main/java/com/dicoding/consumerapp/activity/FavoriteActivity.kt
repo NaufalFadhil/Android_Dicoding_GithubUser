@@ -26,7 +26,6 @@ class FavoriteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFavoriteBinding
     private lateinit var adapter: ListUserAdapter
-    private var user: User? = null
 
     companion object {
         private const val EXTRA_STATE = "EXTRA_STATE"
@@ -95,11 +94,7 @@ class FavoriteActivity : AppCompatActivity() {
     private fun loadUsersAsync() {
         GlobalScope.launch(Dispatchers.Main) {
             showLoading(true)
-//            val userHelper = FavoriteHelper.getInstance(applicationContext)
-            // ATURAN UTAMA: Membuat instance dan membuka koneksi pada metode onCreate()
-//            userHelper.open()
             val deferredUsers = async(Dispatchers.IO) {
-//                val cursor = userHelper.queryAll()
                 val cursor = contentResolver.query(CONTENT_URI, null, null, null, null)
                 MappingHelper.mapCursorToArrayList(cursor)
             }
@@ -115,8 +110,6 @@ class FavoriteActivity : AppCompatActivity() {
                 adapter.notifyDataSetChanged()
                 showSnackbarMessage("Tidak ada data saat ini")
             }
-//            userHelper.close()
-            Log.d("myLog: ", favoriteUser.toString())
         }
     }
 

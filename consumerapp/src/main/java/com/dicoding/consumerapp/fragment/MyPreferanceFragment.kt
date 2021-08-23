@@ -2,7 +2,6 @@ package com.dicoding.consumerapp.fragment
 
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Toast
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
@@ -20,17 +19,12 @@ class MyPreferanceFragment : PreferenceFragmentCompat(),
     private lateinit var languagePreference: Preference
     private lateinit var alarmReceiver: AlarmReceiver
 
-
-    companion object {
-        private const val DEFAULT_VALUE = "default_value"
-    }
-
     override fun onCreatePreferences(bundle: Bundle?, string: String?) {
         addPreferencesFromResource(R.xml.preferences)
         init()
 
-        log.d("MyPref", LANGUAGES.toString())
-        log.d("MyPref", ALARM.toString())
+        log.d("MyPref", LANGUAGES)
+        log.d("MyPref", ALARM)
     }
 
     private fun init() {
@@ -65,9 +59,5 @@ class MyPreferanceFragment : PreferenceFragmentCompat(),
                 context?.let { alarmReceiver.cancelRepeatingAlarm(it, AlarmReceiver.TYPE_REPEATING) }
             }
         }
-//        else if (key == LANGUAGES){
-//            val langIntnt = Intent(Settings.ACTION_LOCALE_SETTINGS)
-//            startActivity(langIntnt)
-//        }
     }
 }

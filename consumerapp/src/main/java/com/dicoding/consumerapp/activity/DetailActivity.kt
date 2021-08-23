@@ -23,8 +23,6 @@ import com.dicoding.consumerapp.model.User
 import com.dicoding.consumerapp.viewmodel.MainViewModel
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.loopj.android.http.AsyncHttpClient
-import com.loopj.android.http.AsyncHttpClient.log
 
 class DetailActivity : AppCompatActivity() {
 
@@ -39,11 +37,8 @@ class DetailActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_USER = "extra_user"
-        const val EXTRA_FAVORITE = "extra_favorite"
         const val EXTRA_POSITION = "extra_position"
-        const val REQUEST_ADD = 100
         const val RESULT_ADD = 101
-        const val REQUEST_DELETE = 200
         const val RESULT_DELETE = 201
 
         @StringRes
@@ -59,8 +54,6 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         user = intent.getParcelableExtra(EXTRA_USER)
-//        var user = intent.getParcelableExtra<User>(EXTRA_USER) as User
-//        user = User()
 
         if (user != null) {
             position = intent.getIntExtra(EXTRA_POSITION, 0)
@@ -79,21 +72,15 @@ class DetailActivity : AppCompatActivity() {
             }
         }
 
-        log.d("MyUser", user.toString())
-        log.d("MyPosition", position.toString())
-        log.d("MyFavorite", isFavorite.toString())
-        log.d("MyUserId", user?.id.toString())
-
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
         mainViewModel.setDetail(user?.username)
         mainViewModel.getDetail().observe(this, { detailUserItem ->
             if (detailUserItem != null) {
                 with(binding) {
-                    com.bumptech.glide.Glide.with(this@DetailActivity)
+                    Glide.with(this@DetailActivity)
                         .load(detailUserItem.avatar)
                         .apply(RequestOptions().override(90, 90))
                         .into(imgAvatar)
-                    com.loopj.android.http.AsyncHttpClient.log.d("apa yaa", detailUserItem.toString())
                     tvName.text = detailUserItem.name
                     tvUsername.text = detailUserItem.username
                     tvLocation.text = detailUserItem.location
@@ -136,22 +123,10 @@ class DetailActivity : AppCompatActivity() {
 
     private fun setFavoriteList(isFavorite: Boolean, user: User) {
         if(isFavorite) {
-            try {
-                log.d("MyLog", "Mau insert nih")
-                insertUser(user)
-                changeFavoriteIcon(isFavorite)
-                log.d("MyLog", "Behasil inser")
-            } catch (e: Exception) {
-                log.d("MyLog", "Gagal Memasukkan ke database")
-            }
+            insertUser(user)
+            changeFavoriteIcon(isFavorite)
         } else {
-            try {
-                log.d("MyLog", "Mau ngapus")
-                deleteUser(user)
-                log.d("MyLog", "Behasil hapus")
-            } catch (e: Exception) {
-                log.d("MyLog", "Gagal Menghapus ke database")
-            }
+            deleteUser()
         }
         val adapter = ListUserAdapter()
         adapter.notifyDataSetChanged()
@@ -162,14 +137,11 @@ class DetailActivity : AppCompatActivity() {
         values.put(DatabaseContract.FavoriteColumns._ID, user.id)
         values.put(DatabaseContract.FavoriteColumns.USERNAME, user.username)
         values.put(DatabaseContract.FavoriteColumns.AVATAR, user.avatar)
-//        favoriteHelper.insert(values)
         contentResolver.insert(CONTENT_URI, values)
         setResult(RESULT_ADD, intent)
     }
 
-    private fun deleteUser(user: User) {
-//        favoriteHelper.deleteById(user.id.toString())
-//        val values = user.id.toString()
+    private fun deleteUser() {
         contentResolver.delete(uriWithId, null, null)
         val intent = Intent()
         intent.putExtra(EXTRA_POSITION, position)

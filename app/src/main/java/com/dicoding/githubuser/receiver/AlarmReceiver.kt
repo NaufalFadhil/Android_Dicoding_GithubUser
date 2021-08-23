@@ -31,7 +31,6 @@ class AlarmReceiver : BroadcastReceiver() {
     }
 
     override fun onReceive(context: Context, intent: Intent) {
-        val type = intent.getStringExtra(EXTRA_TYPE)
         val message = intent.getStringExtra(EXTRA_MESSAGE)
 
         val title = TYPE_REPEATING
@@ -116,13 +115,11 @@ class AlarmReceiver : BroadcastReceiver() {
             AlarmManager.INTERVAL_DAY,
             pendingIntent
         )
-        log.d("MyContext", context.toString())
 
         Toast.makeText(context, "Repeating alarm set up", Toast.LENGTH_SHORT).show()
     }
 
     fun cancelRepeatingAlarm(context: Context, type: String) {
-        log.d("MyContext", context.toString())
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, AlarmReceiver::class.java)
         val requestCode = ID_REPEATING
@@ -132,17 +129,5 @@ class AlarmReceiver : BroadcastReceiver() {
         alarmManager.cancel(pendingIntent)
 
         Toast.makeText(context, "Repeating alarm canceled", Toast.LENGTH_SHORT).show()
-    }
-
-    // Metode ini digunakan untuk validasi date dan time
-    private fun isDateInvalid(date: String, format: String): Boolean {
-        return try {
-            val df = SimpleDateFormat(format, Locale.getDefault())
-            df.isLenient = false
-            df.parse(date)
-            false
-        } catch (e: ParseException) {
-            true
-        }
     }
 }
