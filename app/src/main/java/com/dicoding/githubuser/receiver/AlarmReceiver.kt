@@ -22,7 +22,7 @@ import java.util.*
 class AlarmReceiver : BroadcastReceiver() {
 
     companion object {
-        const val TYPE_REPEATING = "Popular!"
+        const val TYPE_REPEATING = "Github User App"
         const val EXTRA_MESSAGE = "message"
         const val EXTRA_TYPE = "type"
 
@@ -104,8 +104,8 @@ class AlarmReceiver : BroadcastReceiver() {
         intent.putExtra(TYPE_REPEATING, type)
 
         val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, 22)
-        calendar.set(Calendar.MINUTE, 54)
+        calendar.set(Calendar.HOUR_OF_DAY, 9)
+        calendar.set(Calendar.MINUTE, 0)
         calendar.set(Calendar.SECOND, 0)
 
         val pendingIntent = PendingIntent.getBroadcast(context, ID_REPEATING, intent, 0)
