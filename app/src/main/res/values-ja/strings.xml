@@ -11,6 +11,14 @@
     <string name="search_hint">名前を入力</string>
 
     <string name="change_language_settings">言語設定の変更</string>
-    <string name="logo_setting">Logo Pengaturan</string>
-    <string name="reminder">Pengingat</string>
+    <string name="button_favorite">お気に入りのボタン</string>
+    <string name="title_activity_favorite">FavoriteActivity</string>
+    <string name="logo_favorite">お気に入りのロゴ</string>
+    <string name="change_alarm_settings">アラーム設定の変更</string>
+    <string name="alarm_reminder">09.00AMにリマインダーを設定します</string>
+    <string name="key_alarm">alarm</string>
+    <string name="logo_setting">設定ロゴ</string>
+    <string name="key_languages">languages</string>
+    <string name="goBack">最新の人気ユーザーをご覧ください！</string>
+    <string name="reminder">Reminder</string>
 </resources>
