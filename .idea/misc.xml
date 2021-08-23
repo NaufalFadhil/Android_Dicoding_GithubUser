@@ -3,16 +3,43 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/activity_detail.xml" value="0.4325177584846093" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3828125" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_alarm_24.xml" value="0.23125" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.3828125" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.3828125" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.22291666666666668" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_language_24.xml" value="0.22291666666666668" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_language_white_24.xml" value="0.20208333333333334" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_not_favorite_24.xml" value="0.3828125" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_notifications_active_24.xml" value="0.20208333333333334" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.20208333333333334" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.20208333333333334" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.20208333333333334" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_star.xml" value="0.3828125" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.3828125" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_unstar.xml" value="0.3828125" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_vpn_lock_24.xml" value="0.20208333333333334" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_baseline_work_24.xml" value="0.20208333333333334" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/activity_detail.xml" value="0.3961937716262976" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/activity_favorite.xml" value="0.1859375" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/activity_preference.xml" value="0.2328125" />
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/activity_splash_screen.xml" value="0.22644927536231885" />
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/activity_user_list.xml" value="0.176" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/content_favorite.xml" value="0.20677083333333332" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/fragment_first.xml" value="0.20677083333333332" />
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/fragment_follow.xml" value="0.1802536231884058" />
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/fragment_followers.xml" value="0.264" />
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/fragment_following.xml" value="0.1802536231884058" />
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/fragment_no_search.xml" value="0.17889492753623187" />
-        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/item_row_user.xml" value="0.4" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/fragment_second.xml" value="0.20677083333333332" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/item_row_user.xml" value="0.264" />
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/layout/item_user.xml" value="0.536" />
         <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/menu/option_menu.xml" value="0.4" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/app/src/main/res/xml/preferences.xml" value="0.536" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/consumerapp/src/main/res/layout/activity_user_list.xml" value="0.1859375" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/consumerapp/src/main/res/layout/fragment_followers.xml" value="0.1859375" />
+        <entry key="..\:/Dev/Dicoding/AndroidPath/BFAA/GithubUser/consumerapp/src/main/res/layout/fragment_second.xml" value="0.1859375" />
       </map>
     </option>
   </component>

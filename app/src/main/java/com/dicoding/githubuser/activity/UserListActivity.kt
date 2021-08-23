@@ -3,19 +3,18 @@ package com.dicoding.githubuser.activity
 import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.dicoding.githubuser.R
-import com.dicoding.githubuser.model.User
-import com.dicoding.githubuser.adapter.ListUserAdapter
-import com.dicoding.githubuser.databinding.ActivityUserListBinding
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.dicoding.githubuser.R
+import com.dicoding.githubuser.adapter.ListUserAdapter
+import com.dicoding.githubuser.databinding.ActivityUserListBinding
+import com.dicoding.githubuser.model.User
 import com.dicoding.githubuser.viewmodel.MainViewModel
 
 class UserListActivity : AppCompatActivity() {
@@ -24,7 +23,7 @@ class UserListActivity : AppCompatActivity() {
     private lateinit var adapter: ListUserAdapter
     private lateinit var mainViewModel: MainViewModel
 
-    private fun showSelectedUser(user: User) {
+    private fun showSelectedUser(user: User, position: Int) {
         val moveDetailIntent= Intent(this@UserListActivity, DetailActivity::class.java)
         moveDetailIntent.putExtra(DetailActivity.EXTRA_USER, user)
         startActivity(moveDetailIntent)
@@ -37,7 +36,6 @@ class UserListActivity : AppCompatActivity() {
 
         adapter = ListUserAdapter()
         adapter.notifyDataSetChanged()
-
 
         showSearchNotFound(true)
         showLoading(false)
@@ -61,9 +59,9 @@ class UserListActivity : AppCompatActivity() {
         binding.rvUsers.layoutManager = LinearLayoutManager(this)
         binding.rvUsers.adapter = adapter
 
-        adapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback{
-            override fun onItemClicked(data: User) {
-                showSelectedUser(data)
+        adapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: User, position: Int) {
+                showSelectedUser(data, position)
             }
         })
     }
@@ -126,9 +124,16 @@ class UserListActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.action_change_settings) {
-            val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
-            startActivity(mIntent)
+        when (item.itemId) {
+            R.id.settings -> {
+                val prefIntent = Intent(this, PreferenceActivity::class.java)
+                startActivity(prefIntent)
+            }
+            R.id.favorite -> {
+                val favIntent = Intent(this, FavoriteActivity::class.java)
+                startActivity(favIntent)
+            }
+            else -> return true
         }
         return super.onOptionsItemSelected(item)
     }

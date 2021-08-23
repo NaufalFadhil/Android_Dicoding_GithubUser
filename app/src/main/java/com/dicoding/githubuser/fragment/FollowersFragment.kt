@@ -50,10 +50,8 @@ class FollowersFragment : Fragment() {
         adapter = ListUserAdapter()
         adapter.notifyDataSetChanged()
 
-
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
             MainViewModel::class.java)
-
 
         if (username != null) {
             showLoading(true)
@@ -77,14 +75,14 @@ class FollowersFragment : Fragment() {
         binding.rvUsers.layoutManager = LinearLayoutManager(activity)
         binding.rvUsers.adapter = adapter
 
-        adapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback{
-            override fun onItemClicked(data: User) {
-                showSelectedUser(data)
+        adapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: User, position: Int) {
+                showSelectedUser(data, position)
             }
         })
     }
 
-    private fun showSelectedUser(user: User) {
+    private fun showSelectedUser(user: User, position: Int) {
         val moveDetailIntent= Intent(activity, DetailActivity::class.java)
         moveDetailIntent.putExtra(DetailActivity.EXTRA_USER, user)
         startActivity(moveDetailIntent)

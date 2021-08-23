@@ -9,7 +9,16 @@
     <string name="logo_github">Github Logo</string>
     <string name="search">search</string>
     <string name="search_hint">input username</string>
-
     <string name="change_language_settings">Change Language Settings</string>
+    <string name="button_favorite">Favorite Button</string>
+    <string name="title_activity_favorite">FavoriteActivity</string>
+    <string name="logo_favorite">Favorite Logo</string>
+    <string name="change_alarm_settings">Change Alarm Settings</string>
+    <string name="alarm_reminder">Set reminder at 09.00AM</string>
+    <string name="key_alarm">alarm</string>
+    <string name="logo_setting">Settings Logo</string>
+    <string name="key_languages">languages</string>
+    <string name="goBack">See the latest pupular user!</string>
+    <string name="reminder">Reminder</string>
 
 </resources>
