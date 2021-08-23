@@ -263,6 +263,4 @@ class MainViewModel : ViewModel() {
     fun getFollowing(): LiveData<ArrayList<User>> {
         return listFollowing
     }
-
-
 }

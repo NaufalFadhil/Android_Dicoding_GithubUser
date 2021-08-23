@@ -118,7 +118,7 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun cekFavorite(user: User){
-        uriWithId = Uri.parse(CONTENT_URI.toString() + "/" + user?.id)
+        uriWithId = Uri.parse(CONTENT_URI.toString() + "/" + user.id)
         val cursor = contentResolver.query(uriWithId, null, null, null, null)
         if (cursor != null && cursor.moveToNext()) {
             isFavorite = true

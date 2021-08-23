@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.UriMatcher
 import android.database.Cursor
 import android.net.Uri
-import com.dicoding.githubuser.db.DatabaseContract
 import com.dicoding.githubuser.db.DatabaseContract.AUTHORITY
 import com.dicoding.githubuser.db.DatabaseContract.FavoriteColumns.Companion.CONTENT_URI
 import com.dicoding.githubuser.db.DatabaseContract.FavoriteColumns.Companion.TABLE_NAME
@@ -36,7 +35,6 @@ class UserProvider : ContentProvider() {
         }
 
         context?.contentResolver?.notifyChange(CONTENT_URI, null)
-
         return deleted
     }
 
@@ -51,7 +49,6 @@ class UserProvider : ContentProvider() {
         }
 
         context?.contentResolver?.notifyChange(CONTENT_URI, null)
-
         return Uri.parse("$CONTENT_URI/$added")
     }
 

@@ -1,14 +1,10 @@
 package com.dicoding.githubuser.activity
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.githubuser.R
-import com.dicoding.githubuser.databinding.ActivityDetailBinding
 import com.dicoding.githubuser.databinding.ActivityPreferenceBinding
 import com.dicoding.githubuser.fragment.MyPreferanceFragment
-import com.loopj.android.http.AsyncHttpClient
-import com.loopj.android.http.AsyncHttpClient.log
 
 
 class PreferenceActivity : AppCompatActivity() {

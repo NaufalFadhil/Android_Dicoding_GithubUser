@@ -46,7 +46,5 @@ class FavoriteAdapter(private val activity: Activity) : RecyclerView.Adapter<Fav
         TODO("Not yet implemented")
     }
 
-    inner class FavoriteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-    }
+    inner class FavoriteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }

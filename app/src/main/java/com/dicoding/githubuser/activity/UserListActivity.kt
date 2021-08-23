@@ -3,19 +3,18 @@ package com.dicoding.githubuser.activity
 import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.dicoding.githubuser.R
-import com.dicoding.githubuser.model.User
-import com.dicoding.githubuser.adapter.ListUserAdapter
-import com.dicoding.githubuser.databinding.ActivityUserListBinding
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.dicoding.githubuser.R
+import com.dicoding.githubuser.adapter.ListUserAdapter
+import com.dicoding.githubuser.databinding.ActivityUserListBinding
+import com.dicoding.githubuser.model.User
 import com.dicoding.githubuser.viewmodel.MainViewModel
 
 class UserListActivity : AppCompatActivity() {

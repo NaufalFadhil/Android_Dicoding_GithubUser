@@ -54,7 +54,6 @@ class FollowersFragment : Fragment() {
         mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
             MainViewModel::class.java)
 
-
         if (username != null) {
             showLoading(true)
             mainViewModel.setFollowers(username)

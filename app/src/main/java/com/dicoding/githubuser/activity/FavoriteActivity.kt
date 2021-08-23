@@ -9,7 +9,6 @@ import android.os.HandlerThread
 import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dicoding.githubuser.R
 import com.dicoding.githubuser.adapter.ListUserAdapter
 import com.dicoding.githubuser.databinding.ActivityFavoriteBinding
 import com.dicoding.githubuser.db.DatabaseContract.FavoriteColumns.Companion.CONTENT_URI
@@ -25,7 +24,6 @@ class FavoriteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFavoriteBinding
     private lateinit var adapter: ListUserAdapter
-    private var user: User? = null
 
     companion object {
         private const val EXTRA_STATE = "EXTRA_STATE"
@@ -54,7 +52,6 @@ class FavoriteActivity : AppCompatActivity() {
                 loadUsersAsync()
             }
         }
-
 
         contentResolver.registerContentObserver(CONTENT_URI, true, myObserver)
 
@@ -95,11 +92,7 @@ class FavoriteActivity : AppCompatActivity() {
     private fun loadUsersAsync() {
         GlobalScope.launch(Dispatchers.Main) {
             showLoading(true)
-//            val userHelper = FavoriteHelper.getInstance(applicationContext)
-            // ATURAN UTAMA: Membuat instance dan membuka koneksi pada metode onCreate()
-//            userHelper.open()
             val deferredUsers = async(Dispatchers.IO) {
-//                val cursor = userHelper.queryAll()
                 val cursor = contentResolver.query(CONTENT_URI, null, null, null, null)
                 MappingHelper.mapCursorToArrayList(cursor)
             }
@@ -115,7 +108,6 @@ class FavoriteActivity : AppCompatActivity() {
                 adapter.notifyDataSetChanged()
                 showSnackbarMessage("Tidak ada data saat ini")
             }
-//            userHelper.close()
             Log.d("myLog: ", favoriteUser.toString())
         }
     }

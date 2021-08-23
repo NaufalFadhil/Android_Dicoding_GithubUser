@@ -1,6 +1,9 @@
 package com.dicoding.githubuser.receiver
 
-import android.app.*
+import android.app.AlarmManager
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -10,10 +13,7 @@ import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.dicoding.githubuser.R
-import com.dicoding.githubuser.activity.FavoriteActivity
 import com.dicoding.githubuser.activity.UserListActivity
-import com.dicoding.githubuser.fragment.MyPreferanceFragment
-import com.google.android.material.snackbar.Snackbar
 import com.loopj.android.http.AsyncHttpClient.log
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -26,11 +26,7 @@ class AlarmReceiver : BroadcastReceiver() {
         const val EXTRA_MESSAGE = "message"
         const val EXTRA_TYPE = "type"
 
-        // Siapkan 2 id untuk 2 macam alarm, onetime dan repeating
         private const val ID_REPEATING = 101
-
-        private const val DATE_FORMAT = "yyyy-MM-dd"
-        private const val TIME_FORMAT = "HH:mm"
 
     }
 
@@ -41,18 +37,9 @@ class AlarmReceiver : BroadcastReceiver() {
         val title = TYPE_REPEATING
         val notifId = ID_REPEATING
 
-        //Jika Anda ingin menampilkan dengan toast anda bisa menghilangkan komentar pada baris dibawah ini.
-//        showToast(context, title, message)
-
         if (message != null) {
             showAlarmNotification(context, title, message, notifId)
         }
-    }
-
-    // Gunakan metode ini untuk menampilkan toast
-
-    private fun showToast(context: Context, title: String, message: String?) {
-        Toast.makeText(context, "$title : $message", Toast.LENGTH_LONG).show()
     }
 
     // Gunakan metode ini untuk menampilkan notifikasi
@@ -116,7 +103,6 @@ class AlarmReceiver : BroadcastReceiver() {
         val intent = Intent(context, AlarmReceiver::class.java)
         intent.putExtra(EXTRA_MESSAGE, message)
         intent.putExtra(TYPE_REPEATING, type)
-        val putExtra = intent.putExtra(EXTRA_TYPE, type)
 
         val calendar = Calendar.getInstance()
         calendar.set(Calendar.HOUR_OF_DAY, 22)
@@ -147,20 +133,6 @@ class AlarmReceiver : BroadcastReceiver() {
 
         Toast.makeText(context, "Repeating alarm canceled", Toast.LENGTH_SHORT).show()
     }
-
-    // Gunakan metode ini untuk mengecek apakah alarm tersebut sudah terdaftar di alarm manager
-//    fun isAlarmSet(context: Context, type: String): Boolean {
-//        val intent = Intent(context, AlarmReceiver::class.java)
-//        val requestCode =
-//            if (type.equals(TYPE_ONE_TIME, ignoreCase = true)) ID_ONETIME else ID_REPEATING
-//
-//        return PendingIntent.getBroadcast(
-//            context,
-//            requestCode,
-//            intent,
-//            PendingIntent.FLAG_NO_CREATE
-//        ) != null
-//    }
 
     // Metode ini digunakan untuk validasi date dan time
     private fun isDateInvalid(date: String, format: String): Boolean {

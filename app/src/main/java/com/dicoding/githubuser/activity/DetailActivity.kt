@@ -2,10 +2,8 @@ package com.dicoding.githubuser.activity
 
 import android.content.ContentValues
 import android.content.Intent
-import android.database.Cursor
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -18,7 +16,6 @@ import com.dicoding.githubuser.adapter.SectionsPagerAdapter
 import com.dicoding.githubuser.databinding.ActivityDetailBinding
 import com.dicoding.githubuser.db.DatabaseContract
 import com.dicoding.githubuser.db.DatabaseContract.FavoriteColumns.Companion.CONTENT_URI
-import com.dicoding.githubuser.db.FavoriteHelper
 import com.dicoding.githubuser.db.MappingHelper
 import com.dicoding.githubuser.model.User
 import com.dicoding.githubuser.viewmodel.MainViewModel
@@ -59,8 +56,6 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         user = intent.getParcelableExtra(EXTRA_USER)
-//        var user = intent.getParcelableExtra<User>(EXTRA_USER) as User
-//        user = User()
 
         if (user != null) {
             position = intent.getIntExtra(EXTRA_POSITION, 0)
@@ -118,8 +113,7 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun cekFavorite(user: User){
-//        val cursor: Cursor = favoriteHelper.queryById(user.id.toString())
-        uriWithId = Uri.parse(CONTENT_URI.toString() + "/" + user?.id)
+        uriWithId = Uri.parse(CONTENT_URI.toString() + "/" + user.id)
         val cursor = contentResolver.query(uriWithId, null, null, null, null)
         log.d("MyURI", uriWithId.toString())
         if (cursor != null && cursor.moveToNext()) {
@@ -138,22 +132,10 @@ class DetailActivity : AppCompatActivity() {
 
     private fun setFavoriteList(isFavorite: Boolean, user: User) {
         if(isFavorite) {
-            try {
-                log.d("MyLog", "Mau insert nih")
-                insertUser(user)
-                changeFavoriteIcon(isFavorite)
-                log.d("MyLog", "Behasil insert")
-            } catch (e: Exception) {
-                log.d("MyLog", "Gagal Memasukkan ke database")
-            }
+            insertUser(user)
+            changeFavoriteIcon(isFavorite)
         } else {
-            try {
-                log.d("MyLog", "Mau ngapus")
-                deleteUser(user)
-                log.d("MyLog", "Behasil hapus")
-            } catch (e: Exception) {
-                log.d("MyLog", "Gagal Menghapus ke database")
-            }
+            deleteUser()
         }
         val adapter = ListUserAdapter()
         adapter.notifyDataSetChanged()
@@ -164,14 +146,11 @@ class DetailActivity : AppCompatActivity() {
         values.put(DatabaseContract.FavoriteColumns._ID, user.id)
         values.put(DatabaseContract.FavoriteColumns.USERNAME, user.username)
         values.put(DatabaseContract.FavoriteColumns.AVATAR, user.avatar)
-//        favoriteHelper.insert(values)
         contentResolver.insert(CONTENT_URI, values)
         setResult(RESULT_ADD, intent)
     }
 
-    private fun deleteUser(user: User) {
-//        favoriteHelper.deleteById(user.id.toString())
-//        val values = user.id.toString()
+    private fun deleteUser() {
         contentResolver.delete(uriWithId, null, null)
         val intent = Intent()
         intent.putExtra(EXTRA_POSITION, position)

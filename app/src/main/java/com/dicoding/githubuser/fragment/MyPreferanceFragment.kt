@@ -4,13 +4,11 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.provider.Settings
-import android.widget.Toast
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
 import com.dicoding.githubuser.R
 import com.dicoding.githubuser.receiver.AlarmReceiver
-import com.loopj.android.http.AsyncHttpClient.log
 
 class MyPreferanceFragment : PreferenceFragmentCompat(),
     SharedPreferences.OnSharedPreferenceChangeListener {
@@ -22,17 +20,9 @@ class MyPreferanceFragment : PreferenceFragmentCompat(),
     private lateinit var languagePreference: Preference
     private lateinit var alarmReceiver: AlarmReceiver
 
-
-    companion object {
-        private const val DEFAULT_VALUE = "default_value"
-    }
-
     override fun onCreatePreferences(bundle: Bundle?, string: String?) {
         addPreferencesFromResource(R.xml.preferences)
         init()
-
-        log.d("MyPref", LANGUAGES.toString())
-        log.d("MyPref", ALARM.toString())
     }
 
     private fun init() {
@@ -54,22 +44,18 @@ class MyPreferanceFragment : PreferenceFragmentCompat(),
     }
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
-        log.d("MyKey", key.toString())
         if (key == ALARM) {
             val alarm = sharedPreferences?.getBoolean(key, true)
             alarmReceiver = AlarmReceiver()
-            log.d("MyAlarm", alarm.toString())
             if (alarm == true) {
-                log.d("MyContext", alarm.toString())
                 context?.let { alarmReceiver.setRepeatingAlarm(it, getString(R.string.reminder), getString(R.string.goBack)) }
             } else {
-                log.d("MyContext", alarm.toString())
                 context?.let { alarmReceiver.cancelRepeatingAlarm(it, AlarmReceiver.TYPE_REPEATING) }
             }
         }
         else if (key == LANGUAGES){
-            val langIntnt = Intent(Settings.ACTION_LOCALE_SETTINGS)
-            startActivity(langIntnt)
+            val langIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
+            startActivity(langIntent)
         }
     }
 }
